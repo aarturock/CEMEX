@@ -1,0 +1,103 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá, Julio 26, 2016
+=================================================================== */
+.bootstrapWizard {
+    display: block;
+    list-style: outside none none;
+    margin: 20px auto 50px;
+    padding: 25px 0;
+    position: relative;
+    width: 100%;}
+.bootstrapWizard a:active, .bootstrapWizard a:focus, .bootstrapWizard a:hover { text-decoration: none;}
+.bootstrapWizard li {
+    display: block;
+    float: left;
+    padding-left: 0;
+    text-align: center;
+    width: 20%;}
+.bootstrapWizard li::before {
+    border-top: 3px solid #353935;
+    content: "";
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    right: 1px;
+    top: 11px;
+    width: 100%;
+    z-index: 1;}
+.bootstrapWizard li:first-child::before { left: 50%; max-width: 50%;}
+.bootstrapWizard li:last-child::before { max-width: 50%; width: 50%;}
+.bootstrapWizard li.complete .step {
+    background: #0aa66e none repeat scroll 0 0;
+    border: 3px solid #353935;
+    padding: 3px 6px;}
+.bootstrapWizard li .step i {
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    top: -1.5px;}
+.bootstrapWizard li .step {
+    background: #9E9E9E none repeat scroll 0 0;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    color: #fff;
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 9px 13px;
+    position: relative;
+    text-align: center;
+    transition: all 0.1s linear 0s;
+    z-index: 2;}
+.bootstrapWizard li.active .step, .bootstrapWizard li.active.complete .step {
+    background: #03A9F4 none repeat scroll 0 0;
+    border: 3px solid #353935;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 9px 13px;}
+.bootstrapWizard li.active .title,.bootstrapWizard li.complete .title { color: #353935;}
+.bootstrapWizard li .title {
+    color: #999999;
+    display: block;
+    font-size: 13px;
+    line-height: 15px;
+    max-width: 100%;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    top: 20px;
+    word-wrap: break-word;
+    z-index: 104;}
+.wizard-actions {
+    display: block;
+    list-style: outside none none;
+    padding: 0;
+    position: relative;
+    width: 100%;}
+.wizard-actions li { display: inline;}
+.tab-content.transparent { background-color: transparent;}
+.form-actions {
+	background: rgba(249, 249, 249, 0.9) none repeat scroll 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 25px -13px 0;
+    padding: 13px 14px 15px;
+    text-align: right;}
+.wizard.no-margin {
+	margin: 0 !important;
+    background-color: transparent;
+    border: 0px none rgba(0,0,0,0);
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    position: relative;}
+#bootstrap-wizard-1 .tab-content {
+	border-top: 1px solid #cccccc;
+    margin: 25px auto 0;}
+#bootstrap-wizard-1 .tab-content h2{line-height:42px; text-align:left;}

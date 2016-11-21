@@ -1,0 +1,918 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá,  Agosto 4, 2016
+=================================================================== */
+/* CSS Document */
+
+/***************************** BOTONES ********************************/ 		
+.icon-percent::before {
+    content: '%';
+    font-weight: 300;
+	font-family: 'DroidSansBold';
+	font-size:16px;
+	line-height: 22px;}
+	
+.btn {
+	-webkit-border-radius: 0px;
+	-khtml-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	font-family: "Book", Helvetica, Arial, sans-serif;	
+	border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	line-height: 34px !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 12px;}
+.dataTable .btn { border-radius: 0; font-size: 16px; padding: 0; }
+	
+.btn-default { 
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}	
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}	
+	
+.btn-primary {
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	border-width:1px;
+	border-style:solid;}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}	
+	
+.btn-success {
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}	
+	
+.btn-info {
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {	
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}
+		
+.btn-warning {
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}	
+	
+.btn-danger {
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}
+
+.btn-default, .btn-success, .btn-info, .btn-warning, .btn-danger {
+	border-width:1px;
+	border-style:solid;}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active,
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active,
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active,
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active,
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
+	border-width:1px;
+	border-style:solid;}
+	
+/* ------------------------------------------------------------------- */
+/*	BOTONES WIDGETS HOME
+/* ------------------------------------------------------------------- */
+.widget-a {
+    padding: 5px;
+    display: block;
+    width: 100%;
+	border-radius: 0 0 3px 3px;
+    font-family: "RobotoMedium",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+	font-weight:300;
+    letter-spacing: 0.075em;
+	text-align:right;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55);
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	border-width:1px;
+	border-style:solid;}
+.widget-a a {
+	padding-right:15px;} 
+.widget-a:hover, .widget-a:focus, .widget-a:active, .widget-a.active {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);} 
+/* ------------------------------------------------------------------- */
+/*	BOTONES INPUT
+/* ------------------------------------------------------------------- */
+/* BOTON ENVIAR  */		
+input[value="Enviar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/enviar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Enviar"]:hover, input[value="Enviar"]:focus, input[value="Enviar"]:active, input[value="Enviar"].active, input[value="Enviar"].disabled, input[value="Enviar"][disabled], input[value="Enviar"]:active, input[value="Enviar"].active {
+	background-image: url("../img/btn/enviar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON GUARDAR  */		
+input[value="Guardar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/guardar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Guardar"]:hover, input[value="Guardar"]:focus,
+input[value="Guardar"]:active, input[value="Guardar"].active, input[value="Guardar"].disabled, input[value="Guardar"][disabled], input[value="Guardar"]:active, input[value="Guardar"].active {
+	background-image: url("../img/btn/guardar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON ACEPTAR  */	
+input[value="Aceptar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Aceptar"]:hover, input[value="Aceptar"]:focus,
+input[value="Aceptar"]:active, input[value="Aceptar"].active, input[value="Aceptar"].disabled, input[value="Aceptar"][disabled], input[value="Aceptar"]:active, input[value="Aceptar"].active {
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR  */		
+input[value="Agregar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar"]:hover, input[value="Agregar"]:focus,
+input[value="Agregar"]:active, input[value="Agregar"].active, input[value="Agregar"].disabled, input[value="Agregar"][disabled],  input[value="Agregar"]:active, input[value="Agregar"].active {
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR PROSPECTO  */		
+input[value="Nuevo Prospecto"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../img/btn/prospecto-new.png')!important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Nuevo Prospecto"]:hover, input[value="Nuevo Prospecto"]:focus,
+input[value="Nuevo Prospecto"]:active, input[value="Nuevo Prospecto"].active, input[value="Nuevo Prospecto"].disabled, input[value="Nuevo Prospecto"][disabled],  input[value="Nuevo Prospecto"]:active, input[value="Nuevo Prospecto"].active {
+	background-image: url("../img/btn/prospecto-new.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON ELIMINAR PROSPECTO  */		
+input[value="Eliminar Prospecto"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../img/btn/prospecto-delete.png') !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Eliminar Prospecto"]:hover, input[value="Eliminar Prospecto"]:focus,
+input[value="Eliminar Prospecto"]:active, input[value="Eliminar Prospecto"].active, input[value="Eliminar Prospecto"].disabled, input[value="Eliminar Prospecto"][disabled],  input[value="Eliminar Prospecto"]:active, input[value="Eliminar Prospecto"].active {
+	background-image: url("../img/btn/prospecto-delete.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON CREAR PREGUNTA  */		
+input[value="Crear Pregunta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/crear_pregunta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Crear Pregunta"]:hover, input[value="Crear Pregunta"]:focus, input[value="Crear Pregunta"]:active, input[value="Crear Pregunta"].active, input[value="Crear Pregunta"].disabled, input[value="Crear Pregunta"][disabled], input[value="Crear Pregunta"]:active, input[value="Crear Pregunta"].active {
+	background-image: url("../img/btn/crear_pregunta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+
+/* TIP CONTRASEÑA  */	
+	input[value="Tip Pass"] {
+    background-image: url("../img/btn/crear_pregunta.png") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    float: right !important;
+    height: 32px;
+    margin: 0 -13px;
+    padding: 0;
+    position: relative;
+    text-indent: -330px;
+    transition: all 0.5s ease-in-out 0s;
+    width: 34px;
+}
+input[value="Tip Pass"]:hover, input[value="Tip Pass"]:focus, input[value="Tip Pass"]:active, input[value="Tip Pass"].active, input[value="Tip Pass"].disabled, input[value="Tip Pass"][disabled], input[value="Tip Pass"]:active, input[value="Tip Pass"].active {
+	background-image: url("../img/btn/crear_pregunta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }		
+		
+
+/* BOTON CONTRASEÑA  */		
+input[value="Cambiar Contraseña"] {	
+	 background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    float: right !important;
+    height: 32px;
+    margin: 0 -13px;
+    padding: 0;
+    position: relative;
+    text-indent: -330px;
+    transition: all 0.5s ease-in-out 0s;
+    width: 34px;
+	background-image: url("../img/btn/password.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Cambiar Contraseña"]:hover, input[value="Cambiar Contraseña"]:focus, input[value="Cambiar Contraseña"]:active, input[value="Cambiar Contraseña"].active, input[value="Cambiar Contraseña"].disabled, input[value="Cambiar Contraseña"][disabled], input[value="Cambiar Contraseña"]:active, input[value="Cambiar Contraseña"].active {
+	background-image: url("../img/btn/password.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON CONSULTAR RUTA  */		
+input[value="Consultar Rutas"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/consultar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Consultar Rutas"]:hover, input[value="Consultar Rutas"]:focus, input[value="Consultar Rutas"]:active, input[value="Consultar Rutas"].active, input[value="Consultar Rutas"].disabled, input[value="Consultar Rutas"][disabled], input[value="Consultar Rutas"]:active, input[value="Consultar Rutas"].active {
+	background-image: url("../img/btn/consultar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+/* BOTON CONSULTAR  */
+input[value="Consultar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/consultar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Consultar"]:hover, input[value="Consultar"]:focus, input[value="Consultar"]:active, input[value="Consultar"].active, input[value="Consultar"].disabled, input[value="Consultar"][disabled], input[value="Consultar"]:active, input[value="Consultar"].active {
+	background-image: url("../img/btn/consultar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON BUSCAR  */						
+input[value="Buscar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/consultar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Buscar"]:hover, input[value="Buscar"]:focus, input[value="Buscar"]:active, input[value="Buscar"].active, input[value="Buscar"].disabled, input[value="Buscar"][disabled], input[value="Buscar"]:active, input[value="Buscar"].active {
+	background-image: url("../img/btn/consultar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON VER  */						
+input[value="Ver"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/editar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Ver"]:hover, input[value="Ver"]:focus, input[value="Ver"]:active, input[value="Ver"].active, input[value="Ver"].disabled, input[value="Ver"][disabled], input[value="Ver"]:active, input[value="Ver"].active {
+	background-image: url("../img/btn/editar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON NUEVO  */	
+input[value="Nuevo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Nuevo"]:hover, input[value="Nuevo"]:focus, input[value="Nuevo"]:active, input[value="Nuevo"].active, input[value="Nuevo"].disabled, input[value="Nuevo"][disabled], input[value="Nuevo"]:active, input[value="Nuevo"].active {
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON SUBIR  */						
+input[value="Subir Archivo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/subir_archivo.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Subir Archivo"]:hover, input[value="Subir Archivo"]:focus, input[value="Subir Archivo"]:active, input[value="Subir Archivo"].active, input[value="Subir Archivo"].disabled, input[value="Subir Archivo"][disabled], input[value="Subir Archivo"]:active, input[value="Subir Archivo"].active {
+	background-image: url("../img/btn/subir_archivo.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON NUEVO EVENTO  */							
+input[value="Nuevo Evento"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Nuevo Evento"]:hover, input[value="Nuevo Evento"]:focus, input[value="Nuevo Evento"]:active, input[value="Nuevo Evento"].active, input[value="Nuevo Evento"].disabled, input[value="Nuevo Evento"][disabled], input[value="Nuevo Evento"]:active, input[value="Nuevo Evento"].active {
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON APLICAR  */							
+input[value="Aplicar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Aplicar"]:hover,input[value="Aplicar"]:focus, input[value="Aplicar"]:active, input[value="Aplicar"].active, input[value="Aplicar"].disabled, input[value="Aplicar"][disabled], input[value="Aplicar"]:active, input[value="Aplicar"].active {
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON CONFIRMAR  */						
+input[value="Confirmar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Confirmar"]:hover, input[value="Confirmar"]:focus, input[value="Confirmar"]:active, input[value="Confirmar"].active, input[value="Confirmar"].disabled, input[value="Confirmar"][disabled], input[value="Confirmar"]:active, input[value="Confirmar"].active {
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON VER RUTA  */							
+input[value="Ver Ruta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background:rgba(0,0,0,0) url('../../img/botones/logistica.png') no-repeat local center center / auto 100%; }
+input[value="Ver Ruta"]:hover, input[value="Ver Ruta"]:focus, input[value="Ver Ruta"]:active, input[value="Ver Ruta"].active, input[value="Ver Ruta"].disabled, input[value="Ver Ruta"][disabled], input[value="Ver Ruta"]:active, input[value="Ver Ruta"].active {
+	background:rgba(0,0,0,0) url('../../img/botones/logistica.png') no-repeat local center center / auto 100%; }				
+/* BOTON ADMINISTRACION DE ENVIOS [ENCUESTAS]  */						
+input[value="Encuestas Enviadas"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Encuestas Enviadas"]:hover, input[value="Encuestas Enviadas"]:focus, input[value="Encuestas Enviadas"]:active, input[value="Encuestas Enviadas"].active, input[value="Encuestas Enviadas"].disabled, input[value="Encuestas Enviadas"][disabled], input[value="Encuestas Enviadas"]:active,
+input[value="Encuestas Enviadas"].active {
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+
+/* BOTON NUEVO LAYOUT [ENCUESTAS]  */						
+input[value="Nuevo Layout"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../img/btn/layout.png') !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Nuevo Layout"]:hover, input[value="Nuevo Layout"]:focus, input[value="Nuevo Layout"]:active, input[value="Nuevo Layout"].active, input[value="Nuevo Layout"].disabled, input[value="Nuevo Layout"][disabled], input[value="Nuevo Layout"]:active,
+input[value="Nuevo Layout"].active {
+	background-image: url("../img/btn/layout.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+
+/* BOTON ASIGNACION DE PROMOTORES */						
+input[value="Clasificación Promotores"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Clasificación Promotores"]:hover, input[value="Clasificación Promotores"]:focus,  input[value="Clasificación Promotores"]:active, input[value="Clasificación Promotores"].active, input[value="Clasificación Promotores"].disabled, input[value="Clasificación Promotores"][disabled],  input[value="Clasificación Promotores"]:active, input[value="Clasificación Promotores"].active {
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON ASIGNACION DE SUCURSALES */					
+input[value="Asignación Sucursales"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Asignación Sucursales"]:hover, input[value="Asignación Sucursales"]:focus, input[value="Asignación Sucursales"]:active, input[value="Asignación Sucursales"].active, input[value="Asignación Sucursales"].disabled, input[value="Asignación Sucursales"][disabled], input[value="Asignación Sucursales"]:active, input[value="Asignación Sucursales"].active {
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON ASIGNACION DE GERENTES DE ZONA */					
+input[value="Asignación Gerentes"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Asignación Gerentes"]:hover, input[value="Asignación Gerentes"]:focus, input[value="Asignación Gerentes"]:active, input[value="Asignación Gerentes"].active, input[value="Asignación Gerentes"].disabled, input[value="Asignación Gerentes"][disabled], input[value="Asignación Gerentes"]:active, input[value="Asignación Gerentes"].active {
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON REASIGNAR PROMOTOR  */					
+input[value="Reasignar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Reasignar"]:hover, input[value="Reasignar"]:focus, input[value="Reasignar"]:active, input[value="Reasignar"].active, input[value="Reasignar"].disabled, input[value="Reasignar"][disabled], input[value="Reasignar"]:active, input[value="Reasignar"].active {
+	background-image: url("../img/btn/reasignar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON EDITAR  */				
+input[value="Editar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/editar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Editar"]:hover, input[value="Editar"]:focus, input[value="Editar"]:active, input[value="Editar"].active, input[value="Editar"].disabled, input[value="Editar"][disabled], input[value="Editar"]:active, input[value="Editar"].active {
+	background-image: url("../img/btn/editar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON DESCARGAR  */				
+input[value="Descargar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/descargar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Descargar"]:hover, input[value="Descargar"]:focus, input[value="Descargar"]:active, input[value="Descargar"].active, input[value="Descargar"].disabled, input[value="Descargar"][disabled], input[value="Descargar"]:active, input[value="Descargar"].active {
+	background-image: url("../img/btn/descargar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON LIMPIAR  */				
+input[value="Limpiar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/limpiar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Limpiar"]:hover, input[value="Limpiar"]:focus, input[value="Limpiar"]:active, input[value="Limpiar"].active, input[value="Limpiar"].disabled, input[value="Limpiar"][disabled], input[value="Limpiar"]:active, input[value="Limpiar"].active {
+	background-image: url("../img/btn/limpiar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON CANCELAR  */			
+input[value="Cancelar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/cancelar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Cancelar"]:hover, input[value="Cancelar"]:focus, input[value="Cancelar"]:active, input[value="Cancelar"].active, input[value="Cancelar"].disabled, input[value="Cancelar"][disabled], input[value="Cancelar"]:active, input[value="Cancelar"].active {
+	background-image: url("../img/btn/cancelar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON ELIMINAR  */		
+input[value="Eliminar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Eliminar"]:hover, input[value="Eliminar"]:focus,
+input[value="Eliminar"]:active, input[value="Eliminar"].active, input[value="Eliminar"].disabled, input[value="Eliminar"][disabled], input[value="Eliminar"]:active, input[value="Eliminar"].active {
+	background-image: url("../img/btn/eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON REGRESAR  */	
+input[value="Regresar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/regresar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Regresar"]:hover, input[value="Regresar"]:focus, input[value="Regresar"]:active, input[value="Regresar"].active, input[value="Regresar"].disabled, input[value="Regresar"][disabled], input[value="Regresar"]:active, input[value="Regresar"].active {
+	background-image: url("../img/btn/regresar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }		
+/* BOTON CARGA MASIVA  */	
+/*input[value="Carga Masiva"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/layout.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Carga Masiva"]:hover, input[value="Carga Masiva"]:focus, input[value="Carga Masiva"]:active, input[value="Carga Masiva"].active, input[value="Carga Masiva"].disabled, input[value="Carga Masiva"][disabled], input[value="Carga Masiva"]:active, input[value="Carga Masiva"].active {
+	background-image: url("../img/btn/layout.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }		*/	
+/* BOTON CATALOGOS  */		
+input[value="Catalogos"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/regresar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Catalogos"]:hover, input[value="Catalogos"]:focus, input[value="Catalogos"]:active, input[value="Catalogos"].active, input[value="Catalogos"].disabled, input[value="Catalogos"][disabled], input[value="Catalogos"]:active, input[value="Catalogos"].active {
+	background-image: url("../img/btn/regresar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON ACTIVO  */		
+input[value="Activo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Activo"]:hover, input[value="Activo"]:focus, input[value="Activo"]:active, input[value="Activo"].active, input[value="Activo"].disabled, input[value="Activo"][disabled],  input[value="Activo"]:active, input[value="Activo"].active {
+	background-image: url("../img/btn/aplicar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON INACTIVO  */		
+input[value="Inactivo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/cancelar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Inactivo"]:hover, input[value="Inactivo"]:focus, input[value="Inactivo"]:active, input[value="Inactivo"].active, input[value="Inactivo"].disabled, input[value="Inactivo"][disabled], input[value="Inactivo"]:active, input[value="Inactivo"].active {
+	background-image: url("../img/btn/cancelar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+/* BOTON CLONAR ENCUESTA  */		
+input[value="Clonar Encuesta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/clonar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Clonar Encuesta"]:hover, input[value="Clonar Encuesta"]:focus, input[value="Clonar Encuesta"]:active, input[value="Clonar Encuesta"].active, input[value="Clonar Encuesta"].disabled, input[value="Clonar Encuesta"][disabled], input[value="Clonar Encuesta"]:active, input[value="Clonar Encuesta"].active {
+	background-image: url("../img/btn/clonar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+/* BOTON EDITAR EN TABLA  */			
+.table-striped td input[value="Editar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/editar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.table-striped td input[value="Editar"]:hover, .table-striped td input[value="Editar"]:focus, .table-striped td input[value="Editar"]:active, .table-striped td input[value="Editar"].active, .table-striped td input[value="Editar"].disabled, .table-striped td input[value="Editar"][disabled], .table-striped td input[value="Editar"]:active, .table-striped td input[value="Editar"].active {
+	background-image: url("../img/btn/editar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+/* BOTON VER RUTA EN TABLA  */		
+.table-striped td input[value="Ver Ruta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/ruta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.table-striped td input[value="Ver Ruta"]:hover, .table-striped td input[value="Ver Ruta"]:focus, .table-striped td input[value="Ver Ruta"]:active, .table-striped td input[value="Ver Ruta"].active, .table-striped td input[value="Ver Ruta"].disabled, .table-striped td input[value="Ver Ruta"][disabled], .table-striped td input[value="Ver Ruta"]:active, .table-striped td input[value="Ver Ruta"].active {
+	background-image: url("../img/btn/ruta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ENVIAR EN TABLA  */	
+.table-striped td input[value="Enviar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/enviar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.table-striped td input[value="Enviar"]:hover, .table-striped td input[value="Enviar"]:focus, .table-striped td input[value="Enviar"]:active, .table-striped td input[value="Enviar"].active, .table-striped td input[value="Enviar"].disabled, .table-striped td input[value="Enviar"][disabled], .table-striped td input[value="Enviar"]:active, .table-striped td input[value="Enviar"].active {
+	background-image: url("../img/btn/enviar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON CLONAR ENCUESTA EN TABLA  */			
+.table-striped td input[value="Clonar Encuesta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/clonar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.table-striped td input[value="Clonar Encuesta"]:hover, .table-striped td input[value="Clonar Encuesta"]:focus, .table-striped td input[value="Clonar Encuesta"]:active, .table-striped td input[value="Clonar Encuesta"].active, .table-striped td input[value="Clonar Encuesta"].disabled, .table-striped td input[value="Clonar Encuesta"][disabled], .table-striped td input[value="Clonar Encuesta"]:active, .table-striped td input[value="Clonar Encuesta"].active {
+	background-image: url("../img/btn/clonar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+/* BOTON REGRESAR  */		
+.table-striped td input[value="Regresar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/regresar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.table-striped td input[value="Regresar"]:hover, .table-striped td input[value="Regresar"]:focus, .table-striped td input[value="Regresar"]:active, .table-striped td input[value="Regresar"].active, .table-striped td input[value="Regresar"].disabled, .table-striped td input[value="Regresar"][disabled], .table-striped td input[value="Regresar"]:active, .table-striped td input[value="Regresar"].active {
+	background-image: url("../img/btn/regresar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }		
+/* BOTON AGREGAR PREGUNTA A ENCUESTA  */
+input[value="agregar"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="agregar"]:hover, input[value="agregar"]:focus, input[value="agregar"]:active, input[value="agregar"].active, input[value="agregar"].disabled, input[value="agregar"][disabled], input[value="agregar"]:active, input[value="agregar"].active {
+	background-image: url("../img/btn/agregar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON IMPRIMIR  */	
+.btnImprimir {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/imprimir.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.btnImprimir:hover, .btnImprimir:focus, .btnImprimir:active, .btnImprimir.active, .btnImprimir.disabled, .btnImprimir[disabled], .btnImprimir:active, .btnImprimir.active {
+	background-image: url("../img/btn/imprimir.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ELIMINAR FOTO  */	
+.btnEliminar {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+.btnEliminar:hover, .btnEliminar:focus, .btnEliminar:active, .btnEliminar.active, .btnEliminar.disabled, .btnEliminar[disabled],  btnEliminar:active, .btnEliminar.active {
+	background-image: url("../img/btn/eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+	
+	
+/********************** BOTONES AGREGAR ELEMENTOS *************************/ 			
+/* BOTON AGREGAR AGENDA  */		
+input[value="Agregar agenda"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-agenda.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar agenda"]:hover, input[value="Agregar agenda"]:focus,
+input[value="Agregar agenda"]:active, input[value="Agregar agenda"].active, input[value="Agregar agenda"].disabled, input[value="Agregar agenda"][disabled],  input[value="Agregar agenda"]:active, input[value="Agregar agenda"].active {
+	background-image: url("../img/btn/a-agenda.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR CATALOGO  */		
+input[value="Agregar catalogo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-catalogo.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar catalogo"]:hover, input[value="Agregar catalogo"]:focus,
+input[value="Agregar catalogo"]:active, input[value="Agregar catalogo"].active, input[value="Agregar catalogo"].disabled, input[value="Agregar catalogo"][disabled],  input[value="Agregar catalogo"]:active, input[value="Agregar catalogo"].active {
+	background-image: url("../img/btn/a-catalogo.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR CEDIS  */		
+input[value="Agregar cedis"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-cedis.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar cedis"]:hover, input[value="Agregar cedis"]:focus,
+input[value="Agregar cedis"]:active, input[value="Agregar cedis"].active, input[value="Agregar cedis"].disabled, input[value="Agregar cedis"][disabled],  input[value="Agregar cedis"]:active, input[value="Agregar cedis"].active {
+	background-image: url("../img/btn/a-cedis.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }				
+/* BOTON AGREGAR ENCUESTA  */		
+input[value="Agregar encuesta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-encuesta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar encuesta"]:hover, input[value="Agregar encuesta"]:focus,
+input[value="Agregar encuesta"]:active, input[value="Agregar encuesta"].active, input[value="Agregar encuesta"].disabled, input[value="Agregar encuesta"][disabled],  input[value="Agregar encuesta"]:active, input[value="Agregar encuesta"].active {
+	background-image: url("../img/btn/a-encuesta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR MOBILES  */		
+input[value="Agregar mobiles"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-mobiles.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar mobiles"]:hover, input[value="Agregar mobiles"]:focus,
+input[value="Agregar mobiles"]:active, input[value="Agregar mobiles"].active, input[value="Agregar mobiles"].disabled, input[value="Agregar mobiles"][disabled],  input[value="Agregar mobiles"]:active, input[value="Agregar mobiles"].active {
+	background-image: url("../img/btn/a-mobiles.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR NOTICIA  */		
+input[value="Agregar noticia"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-noticia.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar noticia"]:hover, input[value="Agregar noticia"]:focus,
+input[value="Agregar noticia"]:active, input[value="Agregar noticia"].active, input[value="Agregar noticia"].disabled, input[value="Agregar noticia"][disabled],  input[value="Agregar noticia"]:active, input[value="Agregar noticia"].active {
+	background-image: url("../img/btn/a-noticia.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }						
+/* BOTON AGREGAR PERMISOS A USUARIOS  */		
+input[value="Agregar permisos"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-permisos.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar permisos"]:hover, input[value="Agregar permisos"]:focus,
+input[value="Agregar permisos"]:active, input[value="Agregar permisos"].active, input[value="Agregar permisos"].disabled, input[value="Agregar permisos"][disabled],  input[value="Agregar permisos"]:active, input[value="Agregar permisos"].active {
+	background-image: url("../img/btn/a-permisos.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR PROSPECTOS  */		
+input[value="Agregar prospecto"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-prospecto.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar prospecto"]:hover, input[value="Agregar prospecto"]:focus,
+input[value="Agregar prospecto"]:active, input[value="Agregar prospecto"].active, input[value="Agregar prospecto"].disabled, input[value="Agregar prospecto"][disabled],  input[value="Agregar prospecto"]:active, input[value="Agregar prospecto"].active {
+	background-image: url("../img/btn/a-prospecto.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+/* BOTON AGREGAR PUNTO DE VENTA  */		
+input[value="Agregar ptovta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-ptovta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar ptovta"]:hover, input[value="Agregar ptovta"]:focus,
+input[value="Agregar ptovta"]:active, input[value="Agregar ptovta"].active, input[value="Agregar ptovta"].disabled, input[value="Agregar ptovta"][disabled],  input[value="Agregar ptovta"]:active, input[value="Agregar ptovta"].active {
+	background-image: url("../img/btn/a-ptovta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }					
+/* BOTON AGREGAR RUTA  */		
+input[value="Agregar ruta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/a-ruta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Agregar ruta"]:hover, input[value="Agregar ruta"]:focus,
+input[value="Agregar ruta"]:active, input[value="Agregar ruta"].active, input[value="Agregar ruta"].disabled, input[value="Agregar ruta"][disabled],  input[value="Agregar ruta"]:active, input[value="Agregar ruta"].active {
+	background-image: url("../img/btn/a-ruta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }			
+
+/************************* BOTONES SUBIR IMAGEN ****************************/ 		
+.btn-file {
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;}
+  
+.btn-file, .btn-delete {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin-bottom:20px;}	
+ /* BOTON SUBIR IMAGEN  */
+ .btn-file {
+	width:190px; height:34px; line-height:34px; margin:0 0 20px; text-indent:34px; padding:0 8px 0 0; border-width:1px; border-style:solid; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; text-align:left;
+	background-image: url('../../img/botones/camara.png') !important; background-repeat:no-repeat !important; background-position: 0 0 !important;}
+.btn-file:hover,.btn-file:focus, .btn-file.disabled,.btn-file[disabled], .btn-file:active, .btn-file.active{
+	background-image: url('../../img/botones/camara.png') !important; background-repeat:no-repeat !important; background-position: 0 0 !important;}
+ /* BOTON ELIMINAR IMAGEN  */	 
+.btn-delete {
+	width:34px; height:34px; margin:0 0 20px; text-indent:40px; padding: 0; border-width:1px; border-style:solid; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../../img/botones/eliminar.png') !important; background-repeat:no-repeat !important; background-position: center center !important;}
+.btn-delete:hover,.btn-delete:focus,.btn-delete.disabled,.btn-delete[disabled], .btn-delete:active,.btn-delete.active{
+	background-image: url('../../img/botones/eliminar.png') !important; background-repeat:no-repeat !important; background-position: center center !important;}
+
+/* ------------------------------------------------------------------- */
+/*	BOTONES RECADOS
+/* ------------------------------------------------------------------- */
+/* BOTON ENVIAR / RECIBIR  */	
+input[value="Enviar / Recibir"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/recibir.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Enviar / Recibir"]:hover, input[value="Enviar / Recibir"]:focus, input[value="Enviar / Recibir"]:active, input.active[value="Enviar / Recibir"], input.disabled[value="Enviar / Recibir"], input[value="Enviar / Recibir"][disabled], input[value="Enviar / Recibir"]:active, input.active[value="Enviar / Recibir"] {
+	background-image: url("../img/btn/recibir.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ESCRIBIR RECADO  */	
+input[value="Escribir Recado"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/recados.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Escribir Recado"]:hover, input[value="Escribir Recado"]:focus, input[value="Escribir Recado"]:active, input.active[value="Escribir Recado"], input.disabled[value="Escribir Recado"], input[value="Escribir Recado"][disabled], input[value="Escribir Recado"]:active, input.active[value="Escribir Recado"] {
+	background-image: url("../img/btn/recados.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON MARCAR TODO  */	
+input[value="Marcar Todo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/seleccionar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Marcar Todo"]:hover, input[value="Marcar Todo"]:focus, input[value="Marcar Todo"]:active, input.active[value="Marcar Todo"], input.disabled[value="Marcar Todo"], input[value="Marcar Todo"][disabled], input[value="Marcar Todo"]:active, input.active[value="Marcar Todo"] {
+	background-image: url("../img/btn/seleccionar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON DESMARCAR SELECCIÓN  */	
+input[value="Desmarcar Todo"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/desmarcar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Desmarcar Todo"]:hover, input[value="Desmarcar Todo"]:focus, input[value="Desmarcar Todo"]:active, input.active[value="Desmarcar Todo"], input.disabled[value="Desmarcar Todo"], input[value="Desmarcar Todo"][disabled], input[value="Desmarcar Todo"]:active, input.active[value="Desmarcar Todo"] {
+	background-image: url("../img/btn/desmarcar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ELIMINAR SELECCIÓN  */
+input[value="Eliminar Selección"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../img/btn/eliminar.png') !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Eliminar Selección"]:hover, input[value="Eliminar Selección"]:focus, input[value="Eliminar Selección"]:active, input.active[value="Eliminar Selección"], input.disabled[value="Eliminar Selección"], input[value="Eliminar Selección"][disabled], input[value="Eliminar Selección"]:active, input.active[value="Eliminar Selección"] {
+	background-image: url('../img/btn/eliminar.png') !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON INBOX  */			
+input[value="inbox"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/inbox.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="inbox"]:hover, input[value="inbox"]:focus, input[value="inbox"]:active, input[value="inbox"].active, input[value="inbox"].disabled, input[value="inbox"][disabled], input[value="inbox"]:active, input[value="inbox"].active {
+	background-image: url("../img/btn/inbox.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ABRIR NOTIFICACIÓN  */			
+input[value="Abrir Notificación"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../img/btn/notif-ver.png') !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Abrir Notificación"]:hover, input[value="Abrir Notificación"]:focus, input[value="Abrir Notificación"]:active, input[value="Abrir Notificación"].active, input[value="Abrir Notificación"].disabled, input[value="Abrir Notificación"][disabled], input[value="Abrir Notificación"]:active, input[value="Abrir Notificación"].active {
+	background-image: url("../img/btn/notif-ver.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ELIMINAR NOTIFICACIÓN  */			
+input[value="Eliminar Notificación"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/notif-eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Eliminar Notificación"]:hover, input[value="Eliminar Notificación"]:focus, input[value="Eliminar Notificación"]:active, input[value="Eliminar Notificación"].active, input[value="Eliminar Notificación"].disabled, input[value="Eliminar Notificación"][disabled], input[value="Eliminar Notificación"]:active, input[value="Eliminar Notificación"].active {
+	background-image: url("../img/btn/notif-eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ABRIR SOLICITUD  */			
+input[value="Abrir Solicitud"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url('../img/btn/solicitudes.png') !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Abrir Solicitud"]:hover, input[value="Abrir Solicitud"]:focus, input[value="Abrir Solicitud"]:active, input[value="Abrir Solicitud"].active, input[value="Abrir Solicitud"].disabled, input[value="Abrir Solicitud"][disabled], input[value="Abrir Solicitud"]:active, input[value="Abrir Solicitud"].active {
+	background-image: url("../img/btn/solicitudes.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON ELIMINAR SOLICITUD  */			
+input[value="Eliminar Solicitud"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/sol-eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Eliminar Solicitud"]:hover, input[value="Eliminar Solicitud"]:focus, input[value="Eliminar Solicitud"]:active, input[value="Eliminar Solicitud"].active, input[value="Eliminar Solicitud"].disabled, input[value="Eliminar Solicitud"][disabled], input[value="Eliminar Solicitud"]:active, input[value="Eliminar Solicitud"].active {
+	background-image: url("../img/btn/sol-eliminar.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+	
+/* ------------------------------------------------------------------- */
+/*	BOTONES ENCUESTAS
+/* ------------------------------------------------------------------- */	
+/* BOTON REGRESAR ENCUESTAS  */			
+input[value="Regresar encuestas"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/encuesta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Regresar encuestas"]:hover, input[value="Regresar encuestas"]:focus, input[value="Regresar encuestas"]:active, input[value="Regresar encuestas"].active, input[value="Regresar encuestas"].disabled, input[value="Regresar encuestas"][disabled], input[value="Regresar encuestas"]:active, input[value="Regresar encuestas"].active {
+	background-image: url("../img/btn/encuesta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+	
+/* BOTON TIPO RESPUESTA  */			
+input[value="Tipo respuesta"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/tipo_respuesta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Tipo respuesta"]:hover, input[value="Tipo respuesta"]:focus, input[value="Tipo respuesta"]:active, input[value="Tipo respuesta"].active, input[value="Tipo respuesta"].disabled, input[value="Tipo respuesta"][disabled], input[value="Tipo respuesta"]:active, input[value="Tipo respuesta"].active {
+	background-image: url("../img/btn/tipo_respuesta.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+	
+/* ------------------------------------------------------------------- */
+/*	BOTONES PAQUETERIA
+/* ------------------------------------------------------------------- */
+/* BOTON PAQUETE RECOGIDO EN TABLA  */			
+input[value="Recogido"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/paquetes-recogidos.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Recogido"]:hover,
+input[value="Recogido"]:focus,
+input[value="Recogido"]:active,
+input[value="Recogido"].active,
+input[value="Recogido"].disabled,
+input[value="Recogido"][disabled],
+input[value="Recogido"]:active,
+input[value="Recogido"].active {
+	background-image: url("../img/btn/paquetes-recogidos.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }		
+/* BOTON PAQUETE NO RECOGIDO EN TABLA  */			
+input[value="No Recogido"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/paquetes-sin-recoger.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="No Recogido"]:hover,
+input[value="No Recogido"]:focus,
+input[value="No Recogido"]:active,
+input[value="No Recogido"].active,
+input[value="No Recogido"].disabled,
+input[value="No Recogido"][disabled],
+input[value="No Recogido"]:active,
+input[value="No Recogido"].active {
+	background-image: url("../img/btn/paquetes-sin-recoger.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON PAQUETE ENTREGADO EN TABLA  */			
+input[value="Entregado"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/paquetes-entregados.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Entregado"]:hover,
+input[value="Entregado"]:focus,
+input[value="Entregado"]:active,
+input[value="Entregado"].active,
+input[value="Entregado"].disabled,
+input[value="Entregado"][disabled],
+input[value="Entregado"]:active,
+input[value="Entregado"].active {
+	background-image: url("../img/btn/paquetes-entregados.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }	
+/* BOTON PAQUETE RECOLECTADO EN TABLA  */			
+input[value="Recolectado"] {
+	display: inline-block; width:34px; height:34px; margin:0; text-indent:40px; padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background-image: url("../img/btn/paquetes-recolectados.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }
+input[value="Recolectado"]:hover,
+input[value="Recolectado"]:focus,
+input[value="Recolectado"]:active,
+input[value="Recolectado"].active,
+input[value="Recolectado"].disabled,
+input[value="Recolectado"][disabled],
+input[value="Recolectado"]:active,
+input[value="Recolectado"].active {
+	background-image: url("../img/btn/paquetes-recolectados.png") !important; background-repeat:no-repeat !important; background-position: center center !important; }		
+	
+/* ------------------------------------------------------------------- */
+/*	BOTONES EXPORTAR ARCHIVOS
+/* ------------------------------------------------------------------- */
+/* BOTON EXCEL  */	
+input[value="Excel"] {
+	display: inline-block; width:34px; height:34px; margin:0 5px 0 0; text-indent:40px; padding: 5px 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; background-image: url('../img/btn/excel.png'); background-repeat:no-repeat !important; background-position: center center !important;}
+input[value="Excel"]:hover, input[value="Excel"]:focus, input[value="Excel"]:active, input[value="Excel"].active, input[value="Excel"].disabled, input[value="Excel"][disabled] {
+	background-image: url('../img/btn/excel.png');}	
+	
+/* BOTON PDF  */
+input[value="PDF"] {
+	display: inline-block; width:34px; height:34px; margin:0 5px 0 0; text-indent:40px; padding: 5px 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; background-image: url('../img/btn/acrobat.png'); background-repeat:no-repeat !important; background-position: center center !important;}
+input[value="PDF"]:hover, input[value="PDF"]:focus, input[value="PDF"]:active, input[value="PDF"].active, input[value="PDF"].disabled, input[value="PDF"][disabled] {
+	border-width:1px; border-style:solid; -webkit-box-shadow:inset 0 3px 5px 0 rgba(0,0,0,0.15); -moz-box-shadow: inset 0 3px 5px 0 rgba(0,0,0,0.15); box-shadow:inset 0 3px 5px 0 rgba(0,0,0,0.15);	background-image: url('../img/btn/acrobat.png'); 	background-repeat:no-repeat !important; background-position: center center !important;}
+
+/* ------------------------------------------------------------------- */
+/*	BOTONES VISTA PREVIA IMÁGENES
+/* ------------------------------------------------------------------- */		
+.viewer .btn {
+    position:absolute;
+	display:block;
+    top:0px;
+	right:-5px;
+    width: 34px;
+	height:34px;		
+	border-width: 1px;
+	border-style: solid;
+	border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    cursor: pointer;	
+    display: inline-block; margin:0 5px 0 0; text-indent:40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 500;}
+
+/* BOTON TO LEFT  */
+.viewer input[value="Rotar Izquierda"] {
+    top: 1px;
+    background-image: url(../img/btn/to_left.png);}
+.viewer input[value="Rotar Izquierda"]:hover,.viewer input[value="Rotar Izquierda"]:focus,.viewer input[value="Rotar Izquierda"]:active,.viewer input[value="Rotar Izquierda"].active,.viewer input[value="Rotar Izquierda"].disabled,.viewer input[value="Rotar Izquierda"][disabled] {
+	background-image:url(../img/btn/to_left.png);}
+.viewer input[value="Rotar Izquierda"]:active,.viewer input[value="Rotar Izquierda"].active {
+	background-image:url(../img/btn/to_left.png);}
+/* BOTON TO RIGHT  */
+.viewer input[value="Rotar Derecha"] {
+    top: 35px;
+    background-image: url(../img/btn/to_right.png);}
+.viewer input[value="Rotar Derecha"]:hover,.viewer input[value="Rotar Derecha"]:focus,.viewer input[value="Rotar Derecha"]:active,.viewer input[value="Rotar Derecha"].active,.viewer input[value="Rotar Derecha"].disabled,.viewer input[value="Rotar Derecha"][disabled] {
+	background-image:url(../img/btn/to_right.png);}
+.viewer input[value="Rotar Derecha"]:active,.viewer input[value="Rotar Derecha"].active {
+	background-image:url(../img/btn/to_right.png);}
+/* BOTON ZOOM IN  */
+.viewer input[value="Zoom In"] {
+    top: 69px;	
+	display: inline-block;
+    background-image:url(../img/btn/zoom-in.png);}
+.viewer input[value="Zoom In"]:hover,.viewer input[value="Zoom In"]:focus,.viewer input[value="Zoom In"]:active,.viewer input[value="Zoom In"].active,.viewer input[value="Zoom In"].disabled,.viewer input[value="Zoom In"][disabled] {
+	background-image: url(../img/btn/zoom-in.png);}
+.viewer input[value="Zoom In"]:active,.viewer input[value="Zoom In"].active {
+	background-image:url(../img/btn/zoom-in.png);}
+/* BOTON ZOOM OUT  */
+.viewer input[value="Zoom Out"] {
+    top: 103px;
+    background-image: url(../img/btn/zoom-out.png);}
+.viewer input[value="Zoom Out"]:hover,.viewer input[value="Zoom Out"]:focus,.viewer input[value="Zoom Out"]:active,.viewer input[value="Zoom Out"].active,.viewer input[value="Zoom Out"].disabled,.viewer input[value="Zoom Out"][disabled] {
+	background-image: url(../img/btn/zoom-out.png);}
+.viewer input[value="Zoom Out"]:active,.viewer input[value="Zoom Out"].active {
+	background-image:url(../img/btn/zoom-out.png);}	
+/* BOTON ZOOM FIT  */
+.viewer input[value="Zoom Fit"] {
+    top: 137px;
+    background-image:url(../img/btn/zoom-fit.png);}
+.viewer input[value="Zoom Fit"]:hover,.viewer input[value="Zoom Fit"]:focus,.viewer input[value="Zoom Fit"]:active,.viewer input[value="Zoom Fit"].active,.viewer input[value="Zoom Fit"].disabled,.viewer input[value="Zoom Fit"][disabled] {
+	background-image: url(../img/btn/zoom-fit.png);}
+.viewer input[value="Zoom Fit"]:active,.viewer input[value="Zoom Fit"].active {
+	background-image:url(../img/btn/zoom-fit.png);}
+/* BOTON ZOOM ZERO  */
+.viewer input[value="Zoom Zero"] {
+    top: 171px;	
+    background-image: url(../img/btn/zoom-zero.png);}
+.viewer input[value="Zoom Zero"]:hover,.viewer input[value="Zoom Zero"]:focus,.viewer input[value="Zoom Zero"]:active,.viewer input[value="Zoom Zero"].active,.viewer input[value="Zoom Zero"].disabled,.viewer input[value="Zoom Zero"][disabled] {
+	background-image: url(../img/btn/zoom-zero.png);}
+.viewer input[value="Zoom Zero"]:active,.viewer input[value="Zoom Zero"].active {
+	background-image:url(../img/btn/zoom-zero.png);}	
+/* BOTON FULL SCREEN  */
+.viewer input[value="Ver en Pantalla Completa"] {
+    top: 205px;
+    background-image: url(../img/btn/zoom-full.png);}
+.viewer input[value="Ver en Pantalla Completa"]:hover,.viewer input[value="Ver en Pantalla Completa"]:focus,.viewer input[value="Ver en Pantalla Completa"]:active,.viewer input[value="Ver en Pantalla Completa"].active,.viewer input[value="Ver en Pantalla Completa"].disabled,.viewer input[value="Ver en Pantalla Completa"][disabled]  {
+	background-image: url(../img/btn/zoom-full.png);}
+.viewer input[value="Ver en Pantalla Completa"]:active,.viewer input[value="Ver en Pantalla Completa"].active {
+	background-image:url(../img/btn/zoom-full.png);}
+/* BOTON IMPRIMIR  */
+.viewer input[value="img_print"] {
+    top: 239px;
+    background-image: url(../img/btn/imprimir.png);}
+.viewer input[value="img_print"]:hover,.viewer input[value="img_print"]:focus,.viewer input[value="img_print"]:active,.viewer input[value="img_print"].active,.viewer input[value="img_print"].disabled,.viewer input[value="img_print"][disabled] {
+	background-image: url(../img/btn/imprimir.png);}
+.viewer input[value="img_print"]:active,.viewer input[value="img_print"].active {
+	background-image:url(../img/btn/imprimir.png);}	
+/* BOTON ELIMINAR  */
+.viewer input[value="img_delete"] {
+    top: 273px;
+    background-image:url(../img/btn/eliminar.png);}
+.viewer input[value="img_delete"]:hover,.viewer input[value="img_delete"]:focus,.viewer input[value="img_delete"]:active,.viewer input[value="img_delete"].active,.viewer input[value="img_delete"].disabled,.viewer input[value="img_delete"][disabled] {
+	background-image:url(../img/btn/eliminar.png);}
+.viewer input[value="img_delete"]:active,.viewer input[value="img_delete"].active {
+	background-image:url(../img/btn/eliminar.png);}	
+	
+/***************** BOTONES EXPEDIENTE DIGITAL ********************/ 
+/* BOTON SUBIR ARCHIVOS MULTIPLES  */			
+input[type=file].multi {
+    display: block !important;
+	width:34px !important;
+	height:34px !important;
+	background-image: url('../../img/botones/carga-masiva.png') !important; background-repeat:no-repeat !important; background-position: center center !important;
+	float:left;
+    position: relative;
+	text-indent:-9999999px;
+	padding:0 !important;
+	margin:0 !important;}	
+input[type=file]:hover.multi, input[type=file]:focus.multi {
+	background-image: url("../../img/botones/carga-masiva.png") !important; background-repeat:no-repeat !important; background-position: center center !important;
+	text-indent:-9999999px;}
+input[type=file]:active.multi, input[type=file].active.multi {
+	background-image: url("../../img/botones/carga-masiva.png") !important; background-repeat:no-repeat !important; background-position: center center !important;
+	text-indent:-9999999px;}
+/* BOTON VISUALIZAR ARCHIVO  */	
+.btn-a {
+	display:inline-block;
+	padding:0;
+	background-image: url(../img/btn/descargar_archivo.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	 width:34px; height:34px;
+	moz-transition: all 0.5s ease-in-out;
+	ms-transition: all 0.5s ease-in-out;
+	o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}
+.btn-a:hover, .btn-a:focus, .btn-a:active, .btn-a.active {
+	-webkit-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);
+	box-shadow:inset 0 3px 3px 3px rgba(0,0,0,0.15);}
+
+/***************** BOTON PARA ABRIR MAPA ********************/ 
+.btn-mapa input {
+	margin:0 -10px;
+	height:32px;
+	border-width:0 !important;
+	border-style:none !important;}
+	
+
+
+/* ------------------------------------------------------------------- */
+/*	ICONOS BOTONES
+/* ------------------------------------------------------------------- */
+.icon-analytics:before {  content: "\61";}
+
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+    margin-left: 0px;
+}
+.filtros .btn { padding:0 15px 0 5px;}
+/*.filtros .btn i {
+	display: inline-block;
+	vertical-align:middle;
+    height: 34px;
+    line-height: 34px;
+	position:relative;
+	margin:0 10px 0 auto;
+	padding: 0;
+	width:34px;font-size:16px;}*/
+.btn i {font-size:16px; margin-right:5px;line-height: 34px;}
+.btn .tm {padding: 0 12px 0 3px;background:rgba(0,0,0,0);}
+
+.tm i{
+	background:rgba(0,0,0,0);
+	display: inline-block;
+	vertical-align:middle;
+    height: 34px;
+    line-height: 34px;
+	position:relative;
+	margin:0 auto;
+	padding: 0;
+	width:34px;
+	font-size:16px;}
+
+
+.tm i.acrobat {background:rgba(0,0,0,0) url('../../img/botones/acrobat.png') no-repeat local center center / auto 100%;}
+.tm i.editar {background:rgba(0,0,0,0) url('../../img/botones/editar.png') no-repeat local center center / auto 100%;}
+.tm i.eliminar {background:rgba(0,0,0,0) url('../../img/botones/eliminar.png') no-repeat local center center / auto 100%;}
+.tm i.excel {background:rgba(0,0,0,0) url('../../img/botones/excel.png') no-repeat local center center / auto 100%;}
+.tm i.guardar {background:rgba(0,0,0,0) url('../../img/botones/guardar.png') no-repeat local center center / auto 100%;}
+.tm i.imprimir {background:rgba(0,0,0,0) url('../../img/botones/imprimir.png') no-repeat local center center / auto 100%;}
+
+.tm i.exportar {background:rgba(0,0,0,0) url('../../img/botones/exportar.png') no-repeat local center center / auto 100%;}
+.tm i.cmasiva {background:rgba(0,0,0,0) url('../../img/botones/carga-masiva.png') no-repeat local center center / auto 80%;}
+.tm i.clonar {background:rgba(0,0,0,0) url('../../img/botones/clonar.png') no-repeat local center center / auto 100%;}
+.tm i.consultar {background:rgba(0,0,0,0) url('../../img/botones/consulta.png') no-repeat local center center / auto 100%;}
+
+.tm i.logistica {background:rgba(0,0,0,0) url('../../img/botones/logistica.png') no-repeat local center center / auto 100%;}
+
+/*input[value="Ver Ruta"] {
+	display: inline-block; 
+	width:34px; height:34px; 
+	margin:0; text-indent:40px; 
+	padding: 0; border-width:1px; border-style:solid; moz-transition: all 0.5s ease-in-out; ms-transition: all 0.5s ease-in-out; o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;
+	background:rgba(0,0,0,0) url('../../img/botones/logistica.png') no-repeat local center center / auto 100%; }
+input[value="Ver Ruta"]:hover, input[value="Ver Ruta"]:focus, input[value="Ver Ruta"]:active, input[value="Ver Ruta"].active, input[value="Ver Ruta"].disabled, input[value="Ver Ruta"][disabled], input[value="Ver Ruta"]:active, input[value="Ver Ruta"].active {
+	background:rgba(0,0,0,0) url('../../img/botones/logistica.png') no-repeat local center center / auto 100%; }*/
+
+.bg-contacto, .bg-funcEditar, .bg-funcEliminar, .bg-funcStatus,
+.bg-funcGuardar, .bg-funcExportar, .bg-funcCmasiva,
+.bg-funcConsultar {
+	display: inline-block;
+	vertical-align:middle;
+    height: 40;
+    line-height: 40;
+	position:relative;
+	margin:0 auto;
+	padding: 0;
+	width:40;}
+
+.bg-contacto {background:rgba(0,0,0,0) url(../../img/botones/fcontacto.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcEditar {background:rgba(0,0,0,0) url(../../img/botones/feditar.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcEliminar {background:rgba(0,0,0,0) url(../../img/botones/feliminar.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcStatus {background:rgba(0,0,0,0) url(../../img/botones/fstatus.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcGuardar {background:rgba(0,0,0,0) url(../../img/botones/fguardar.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcExportar {background:rgba(0,0,0,0) url(../../img/botones/fexportar.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcCmasiva {background:rgba(0,0,0,0) url(../../img/botones/fcarga-masiva.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcClonar {background:rgba(0,0,0,0) url(../../img/botones/fclonar.png) no-repeat local center center / 40px 40px; z-index:1;}
+.bg-funcConsultar {background:rgba(0,0,0,0) url(../../img/botones/fconsulta.png) no-repeat local center center / 40px 40px; z-index:1;}
+
+.btn-danger-bin {background:rgba(0,0,0,0) url('../../img/botones/eliminar.png') no-repeat local center center / auto 80%; border-width:1px; line-height: 32px !important; margin: 0 0 0 2px; font-size: 0;width: 34px; float:left;}
+
+.buttons-excel, .buttons-pdf {text-indent: 30px;}
+
+.buttons-excel {
+    background: #02723b url('../../img/botones/excel.png') no-repeat local 0 center / auto 100%;
+    color: #ffffff;}
+.buttons-excel:hover, .buttons-excel:focus, .buttons-excel:active, .buttons-excel.active, .buttons-excel.disabled, .buttons-excel[disabled] {
+    background-color: #024e32;
+    color: #ffffff;}
+.buttons-pdf {
+    background: #c1272d url("../../img/botones/acrobat.png") no-repeat local 0 center / auto 100%;
+    color: #ffffff;}
+.buttons-pdf:hover, .buttons-pdf:focus, .buttons-pdf:active, .buttons-pdf.active, .buttons-pdf.disabled, .buttons-pdf[disabled] {
+    background-color: #ae0f13;
+    color: #ffffff;}

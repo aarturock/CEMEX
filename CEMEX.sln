@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEMEX.Web", "CEMEX.Web\CEMEX.Web.csproj", "{0015B8C0-4647-4C50-9D5B-D69E93D2F3CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEMEX.Entidades", "CEMEX.Entidades\CEMEX.Entidades.csproj", "{E790A0B4-82F1-44B6-B7C1-93AE743AF83A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEMEX.Datos", "CEMEX.Datos\CEMEX.Datos.csproj", "{557FCAC3-89E4-4D5E-A409-ABFD2F454E44}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0015B8C0-4647-4C50-9D5B-D69E93D2F3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0015B8C0-4647-4C50-9D5B-D69E93D2F3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0015B8C0-4647-4C50-9D5B-D69E93D2F3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0015B8C0-4647-4C50-9D5B-D69E93D2F3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E790A0B4-82F1-44B6-B7C1-93AE743AF83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E790A0B4-82F1-44B6-B7C1-93AE743AF83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E790A0B4-82F1-44B6-B7C1-93AE743AF83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E790A0B4-82F1-44B6-B7C1-93AE743AF83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557FCAC3-89E4-4D5E-A409-ABFD2F454E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557FCAC3-89E4-4D5E-A409-ABFD2F454E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557FCAC3-89E4-4D5E-A409-ABFD2F454E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557FCAC3-89E4-4D5E-A409-ABFD2F454E44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

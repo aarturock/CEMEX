@@ -1,0 +1,285 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá, Agosto 6, 2016
+=================================================================== */
+	
+	
+/* ------------------------------------------------------------------- */
+/*	Asignación para permisos de Roles
+/* ------------------------------------------------------------------- */
+#funcionalidadesWeb .panel-group,
+#funcionalidadesApp .panel-group { margin-bottom: 10px;}
+
+.panel-group { margin-bottom: 0;}
+.well .panel-body { padding:0;}
+.list-group-item {padding: 5px 15px;}
+li.list-group-item-info  i {
+	color: #31708f !important;
+	background-color: transparent;
+	display: block;
+	float: right;
+	height: 35px;
+	line-height: 35px;
+	margin: 0;
+	padding-left: 15px;
+	position: relative;
+	text-align: center;}
+
+
+.form-horizontal .checkbox, .form-horizontal .checkbox-inline,
+.form-horizontal .radio, .form-horizontal .radio-inline {
+    padding-top: 5px;}
+.form-inline textarea.form-control { width: 100% !important;font-size: 14px; }
+	
+.checkbox input[type="checkbox"] { margin-left: -30px;}
+
+.checkbox { margin-bottom: 0px; margin-top: 15px;border-bottom: 1px solid #eeeeee;}
+.checkbox label {line-height: 25px; margin-bottom: 6px;
+    padding: 0 0 0 45px;}
+.checkbox label h5, .checkbox label p { margin-bottom:5px; margin-top:0;line-height: 30px;}
+.checkbox label h3 { font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;}
+.checkbox label p { font-weight:normal !important;font-family: "Book",Arial,Helvetica,sans-serif; margin-bottom:5px;}
+	
+.btn-select {
+    border-color: transparent transparent #eeeeee;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    display: table;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;}
+.btn-select label.btn {
+    color: #666666;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: normal;
+    line-height: 40px;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center !important;
+    white-space: inherit;
+    width: 40px;
+	background-color:#F0F0F0;
+    border-color: transparent !important;}
+
+.btn-select label.btn input[type="checkbox"] {
+    -webkit-appearance:  checkbox;
+    -moz-appearance: checkbox;
+	appearance:checkbox;
+    border:0;
+    vertical-align: middle;
+    top: 1px;
+    bottom: 1px;
+    *overflow: hidden;
+    box-sizing: border-box; /* 1 */
+    *height: 1px; /* Removes excess padding in IE 7 */
+    *width: 1px;
+	display:none;}	
+.btn-select span {
+    display: block;
+    float: left;
+    height: 41px !important;
+    margin: 5px;
+    position: relative;
+    width: 60px;}
+.btn-select span  input[type="checkbox"] {
+    -webkit-appearance:  checkbox;
+    -moz-appearance: checkbox;
+    -ms-appearance:  checkbox;
+    -o-appearance: checkbox;
+	appearance:checkbox;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    vertical-align: middle;}
+.btn-select span p {
+    display: block;
+    font-family: "Bold",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+	color:#004ab1;}
+.btn-select i {
+    background-color: rgba(92, 184, 92, 0.5);
+    color: rgba(255, 255, 255, 1);
+    display: none;
+    font-size: 24px;
+    line-height: 40px;
+    position: absolute;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    top: 0;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    width: 40px;}
+.btn-select .btn:hover i {
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    text-shadow: none;
+    z-index: 50;}
+.btn-select .active i {
+    display: block;
+    opacity: 1 !important;
+    z-index: 50;}
+.newForm {
+	border-bottom:1px solid #EEEEEE;
+	margin-bottom:20px;
+	display:block;
+	position:relative;
+	padding-bottom:20px;}
+	
+fieldset.disabled .form-control, fieldset[disabled] .form-control {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px none rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    opacity: 1;
+	cursor:not-allowed;}
+	
+.form-horizontal .form-group { margin-left: 15px; margin-right: 15px;}
+
+/*========= Botones para asignar Contacto Nuevo y Contacto Principal ========= */	
+#wrap { width: 99%;}
+.box { width: 101%; height: 100px; display:block; }
+.contactTabs {
+    border-color: transparent transparent #eeeeee;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    display: table;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;}
+.btnContactTabs { display: block;height: 100px;}
+.btnContactTabs label.btn {
+    background-color: #f0f0f0;
+    border-color: #cccccc !important;
+    color: #666666;
+    font-size: 16px;
+    height: 60px;
+    letter-spacing: normal;
+    line-height: 80px;
+    margin: 10px auto 25px !important;
+    padding: 0;
+    text-align: center !important;
+    white-space: inherit;
+    width: 60px;
+	display:inline-block;}
+.btnContactTabs label.btn input[type="radio"] {
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    -ms-appearance: radio;
+    -o-appearance: radio;
+    appearance: radio;
+    border: 0 none;
+    bottom: 1px;
+    box-sizing: border-box;
+    display: none;
+    top: 1px;
+    vertical-align: middle;}
+.btnContactTabs i {
+    background-color: rgba(92, 184, 92, 0.55);
+    color: rgba(255, 255, 255, 1);
+    display: none;
+    font-size: 28px;
+    line-height: 60px;
+    position: absolute;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+    top: 0;
+    transition: all 0.5s ease-in-out 0s;
+    width: 60px;}
+.btnContactTabs .btn:hover i {
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    text-shadow: none;
+    z-index: 50;}
+.btnContactTabs .active i {
+    display: block;
+    opacity: 1 !important;
+    z-index: 50;}
+	
+.btnContactTabs a.btn {
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-radius: 0;
+    display: inline-block;
+    font-family: "Book",Helvetica,Arial,sans-serif;
+    font-size: 9px;
+    line-height: 14px !important;
+    margin: 63px auto 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 60px;}
+.addContact {margin-top: 10px;}
+	
+
+/*========= Wizard PGV ========= */
+.wizard{position:relative;overflow:hidden;background-color:#eee;border:1px solid #d4d4d4;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;*zoom:1;-webkit-box-shadow:0 1px 4px rgba(0,0,0,.065);-moz-box-shadow:0 1px 4px rgba(0,0,0,.065);box-shadow:0 1px 4px rgba(0,0,0,.065)}
+.wizard:after,.wizard:before{display:table;line-height:0;content:""}
+.wizard:after{clear:both}
+.wizard ul{width:1010px;padding:0;margin:0;list-style:none outside none}
+.wizard ul.previous-disabled li.complete{cursor:default}
+.wizard ul.previous-disabled li.complete:hover{color:#356e35;cursor:default;background:#f3f4f5}
+.wizard ul.previous-disabled li.complete:hover .chevron:before{border-left-color:#f3f4f5}
+.wizard ul li,
+.wizard ul div.managementSales{background: #9fb8d6 none repeat scroll 0 0;
+    color: #FFFFFF;
+    cursor: default;
+    display: block;
+    float: left;
+    font-family: "Bold",Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    height: 46px;
+    line-height: 12px;
+    margin: 0;
+    padding: 5px 20px 0;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: bottom !important; width:125px;}
+.wizard ul div.managementSales { background:#b3c295;}
+.wizard ul li .chevron,
+.wizard ul div.managementSales .chevron{position:absolute;top:0;right:-14px;z-index:1;display:block;border:24px solid transparent;border-right:0;border-left:14px solid #d4d4d4}
+.wizard ul li .chevron:before,
+.wizard ul div.managementSales .chevron:before{position:absolute;top:-24px;right:1px;display:block;border:24px solid transparent;border-right:0;border-left:14px solid #9fb8d6;content:""}
+.wizard ul div.managementSales .chevron:before{border-left:14px solid #b3c295;}
+
+.wizard ul li.complete{color:#FFFFFF;background:#4F81BD}
+.wizard ul li.complete:hover{cursor:pointer;background:#004ab1}
+.wizard ul li.complete:hover .chevron:before{border-left:14px solid #004ab1}
+.wizard ul li.complete .chevron:before{border-left:14px solid #4F81BD}
+.wizard ul li.active{color:#FFFFFF;background:#4F81BD}
+.wizard ul li.active .chevron:before{border-left:14px solid #4F81BD}
+.wizard ul li .badge{margin-right:8px}
+.wizard ul li:first-child{padding-left:20px;border-radius:4px 0 0 4px}
+.wizard .actions{position:absolute;right:0;z-index:2;float:right;padding-right:15px;padding-left:15px;line-height:46px;vertical-align:middle;background-color:#eee;border-left:1px solid #d4d4d4}
+.wizard .actions a{margin-right:8px;font-size:12px;line-height:45px}
+.wizard .actions .btn-prev i{margin-right:5px}
+.wizard .actions .btn-next i{margin-left:5px}
+.step-content .step-pane{display:none}
+.step-content .active{display:block}
+.step-content .active .btn-group .active{display:inline-block}
+.step-content .progress {  background-color: #f5f5f5; border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset; height: 15px;}	
+.progress-bar-pgv-01,
+.progress-bar-pgv-02,
+.progress-bar-pgv-03,
+.progress-bar-pgv-04,
+.progress-bar-pgv-05 { width: 125px !important;}
+
+.progress-bar-pgv-01 { background-color:#ff1d25;}	
+.progress-bar-pgv-02 { background-color:rgba(255, 129, 15, 1);}	
+.progress-bar-pgv-03 { background-color:#ffc400;}	
+.progress-bar-pgv-04 { background-color:rgba(202, 187, 0, 1);}	
+.progress-bar-pgv-05 { background-color:#7caf00;}

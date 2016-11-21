@@ -1,0 +1,141 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá,  Enero 28, 2016
+=================================================================== */
+/* CSS Document */
+
+/***************************** FILTROS DE BÚSQUEDA ********************************/
+.filtros {
+	margin:0px auto;
+	padding:0px;}
+.filtros .row {
+	margin:0px auto;
+	padding:10px;
+	border-width:1px 0 1px 0;
+	border-style:solid none solid none;}
+.filtros div.form-group:last-child,
+div.form-group:last-child  {
+    border-top: 0px none transparent !important;}
+.filtros .col-md-1, .filtros .col-lg-1,
+.filtros .col-md-2, .filtros .col-lg-2,
+.filtros .col-md-3, .filtros .col-lg-3,
+.filtros .col-md-4, .filtros .col-lg-4,
+.filtros .col-md-5, .filtros .col-lg-5,
+.filtros .col-md-6, .filtros .col-lg-6,
+.filtros .col-md-7, .filtros .col-lg-7,
+.filtros .col-md-8, .filtros .col-lg-8,
+.filtros .col-md-9, .filtros .col-lg-9,
+.filtros .col-md-10, .filtros .col-lg-10,
+.filtros .col-md-11, .filtros .col-lg-11,
+.filtros .col-md-12, .filtros .col-lg-12 {
+    padding-left: 5px;
+    padding-right: 5px;}
+	
+.filtros legend {
+    border-bottom: 0 none rgba(0, 0, 0, 0);
+    font-family: "RobotoRegular",Helvetica,Arial,sans-serif;
+    margin-bottom: 0;
+    text-align: center;}
+.panel-body .filtros {
+	margin:-15px -15px 15px;}
+.panel-body .filtros .row {
+	padding-top:15px;
+	padding-bottom:5px;}
+	
+.filtros input[value="Buscar"] {
+	display: block; margin: 0 auto; width:39px;  height:39px;}
+
+.filtros input {line-height: 34px; height:34px;}
+	
+@media (max-width:991px){	
+.filtros input[value="Buscar"] { margin-top:0px;}}
+
+label.panel-title {
+	font-size:14px;
+	line-height:15px;
+	font-weight:500;
+	text-indent:10px;}	
+.bowidget > header label {
+    font-size: 14px;
+    font-weight: 500;
+    text-indent: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;}
+.bowidget > header .form-group {
+	display: block;
+    float: left;
+    height: 100%;
+    left: 0;
+    line-height: 34px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 70%;}	
+.bowidget.transparent .filtros {
+	margin-bottom:30px;}
+	
+
+.filtros .nav {margin:0 auto 5px;}
+.filtros .nav-pills span {
+	display:block;}
+.filtros .nav-pills span a {
+	background-color: #a31218;
+	border: 1px solid #ba151c;
+	border-radius: 0px;
+	color: #d8d8d8;
+	display:block;
+	line-height:34px;
+	margin-right:0px;
+    padding: 0px 15px;
+    position: relative;
+	text-align:center;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;}
+.filtros .nav-pills span a:hover, .filtros .nav-pills span a:focus,
+.filtros .nav-pills span.active a, .filtros .nav-pills span.current a:hover, .filtros .nav-pills span.current a:focus {
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+	border: 1px solid #ba151c;	
+	color:#FFFFFF;
+	box-shadow:0 3px 5px 0 rgba(0, 0, 0, 0.15) inset;}
+.filtros .nav-pills span a:hover, .filtros .nav-pills span a:focus {background-color: #d1181f;}
+.filtros .nav-pills span.current a {background-color: #e91b23;}
+.filtros .nav-pills span.current a:hover, .filtros .nav-pills span.current a:focus {
+	-webkit-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-ms-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-o-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;background-color: #ba151c;}
+	
+.filtros .visible, .filtros .hidden {
+	display: block !important; height:34px !important; min-height:34px !important;}	
+.filtros .visible .form-group, .filtros .hidden .form-group {
+	padding:0; margin:0 auto;}
+.filtros .visible .form-group {display:block;}
+.filtros .hidden .form-group {display:none;}
+.filtros .visible, .filtros .visible .form-group,
+.filtros .hidden, .filtros .hidden .form-group {
+	-webkit-transition: all 0.5s ease-in-out;
+	   -moz-transition: all 0.5s ease-in-out;
+	    -ms-transition: all 0.5s ease-in-out;
+	     -o-transition: all 0.5s ease-in-out;
+	        transition: all 0.5s ease-in-out;}
+
+.alert { margin:20px;}	
+@media (max-width:991px){
+	.filtros .nav-pills {
+		max-width:250px;
+		float: left;}
+	.filtros .nav-pills span {
+		display: block;
+		margin-bottom:5px;
+		position:relative;}
+	.filtros .nav-pills span a {
+		display:block;}
+.alert { margin:5px auto 10px;}	
+	}

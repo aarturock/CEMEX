@@ -1,0 +1,99 @@
+﻿@using CEMEX.Entidades
+@model List<CEMEX.Entidades.Rol>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<div id="page-content">
+    <h1 class="page-header"><i class="modulo-configuracion"></i> Configuracion</h1>
+    <section id="widget-grid">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <!--================= Inicia Widget (cada widget requiere un ID único) ==================-->
+                <div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-deletebutton="false">
+                    <header> <h2>Listado de Roles</h2> </header>
+                    <div>
+                        <div class="jarviswidget-editbox"> <input class="form-control" type="text"> </div>
+
+                        <div class="widget-body no-padding">
+                            <div class="filtros">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @using (Html.BeginForm("Index", "Rol", FormMethod.Get))
+                                        {
+                                        <div class="form-group col-md-4">
+                                            <label class="control-label">
+                                                Status de Roles<span class="req"></span>
+                                                @Html.DropDownList("statusRegistro", new SelectList(ViewBag.EstatusRegistro, "Id", "Nombre"), new { onchange = "this.form.submit();", @class = "hide-search" })
+                                            </label>
+                                        </div>
+                                        
+                                        }
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group col-md-12">
+                                            <div class="btn-group btn-group-table pull-right" role="group">
+                                                <button class="btn btn-info tm" onclick="window.location.href='@Url.Action("Crear","Rol")'"><i class="fa fa-plus-circle"></i> Nuevo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                    <table id="admonUsuarios" class="display responsive" cellpadding="0" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="all">ID</th>
+                                                <th class="all">Rol</th>
+                                                <th class="all">Status</th>
+                                                <th class="all">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @for (var index = 0; index < Model.Count; index++)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                       @Model[index].Id
+                                                    </td>
+                                                    <td>
+                                                        @Model[index].Nombre
+                                                    </td>
+                                                    <td>
+                                                        @if (Model[index].IdStatus == (int)ETypeStatusRegistro.Activo)
+                                                        {
+                                                            <div class="alert-success">Activo</div>
+                                                        }
+                                                        else if (Model[index].IdStatus == (int)ETypeStatusRegistro.Inactivo)
+                                                        {
+                                                            <div class="alert-danger">Inactivo</div>
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group btn-group-sm" role="group" aria-label="acciones">
+                                                            <button type="button" class="btn btn-danger tm" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="eliminar"></i></button>
+                                                            <button type="button" class="btn btn-info tm" data-toggle="tooltip" data-placement="top" title="Clonar"><i class="clonar"></i></button>
+                                                            <button type="button" class="btn btn-info tm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="editar"></i></button>
+                                                            <button type="button" class="btn btn-info tm" data-toggle="tooltip" data-placement="top" title="Consultar"><i class="consultar"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            }                                           
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--================================== Termina Widget ===================================-->
+            </article>
+        </div>
+
+    </section>
+</div>
+

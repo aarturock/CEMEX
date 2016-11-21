@@ -1,0 +1,38 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá, Julio 22, 2016
+=================================================================== */
+/* CSS Document */
+@font-face {
+  font-family: 'Light';
+  src: url('Light.eot'); /* IE9 Compat Modes */
+  src: url('Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Light.svg#svggothamlight') format('svg'); /* Legacy iOS */}
+@font-face {
+  font-family: 'Book';
+  src: url('Book.eot'); /* IE9 Compat Modes */
+  src: url('Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Book.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Book.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Book.svg#svggothambook') format('svg'); /* Legacy iOS */}
+@font-face {
+  font-family: 'Regular';
+  src: url('Regular.eot'); /* IE9 Compat Modes */
+  src: url('Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Regular.svg#svggillsansregular') format('svg'); /* Legacy iOS */}
+@font-face {
+  font-family: 'Bold';
+  src: url('Bold.eot'); /* IE9 Compat Modes */
+  src: url('Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Bold.svg#svggothambold') format('svg'); /* Legacy iOS */}

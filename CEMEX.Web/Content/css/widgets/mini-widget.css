@@ -1,0 +1,57 @@
+/* ================================================================ 
+Copyright (c) 2013-2015 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá,  Junio 22, 2015
+=================================================================== */
+
+/* CSS Document */
+
+/***************************** MINI WIDGETS ********************************/  
+.quick-button { margin-top: 10px; margin-bottom: 15px; text-align: center;}
+.quick-button-heading {
+    position: relative; width: 80px; height: 80px; margin: 0 auto -40px; border-radius: 100%; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -webkit-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15);
+    border: 3px solid rgba(255,255,255,0.3);}
+.quick-button-heading i {
+	text-align: center; font-size:40px; line-height: 75px; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);}
+.quick-button-content {
+	padding-top: 50px; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25); -webkit-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -ms-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -o-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15);}
+.quick-button-number {
+	padding: 5px 0 15px; font-size: 26px; font-weight: 700; line-height: 1;}
+.quick-button-description { text-transform: uppercase;}
+.quick-button-description ul.list-unstyled li {
+	text-transform: none; text-align:left; font-size: 13px; line-height: 17px;}
+.quick-button-footer, .quick-button-footer.goal {
+    display: block; overflow: hidden; text-overflow: ellipsis; width: 100%; white-space: nowrap; padding: 5px; font-size:14px; background-color: rgba(0,0,0,0.1); transition: all ease-in-out .3s; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25); letter-spacing: 0.075em;
+	font-family: "RobotoBoldCondensed", Helvetica, Arial, sans-serif;}
+.quick-button-footer { text-transform:uppercase;}
+.quick-button-footer a, .quick-button-footer a:hover { text-decoration:none;}
+.quick-button-footer:hover { text-decoration: none;}
+.quick-button-content.goal { text-shadow: 2px 2px 0 #FFF;}
+	
+.quick-button i.encuestas-home {
+    background: url('../img/btn/encuestas-home.png') no-repeat center center;
+    display: block; height: 75px; width: 75px;}
+.quick-button a i.encuestas-home {
+    background: url('../img/btn/encuestas-home.png') no-repeat center center;}
+.quick-button a:hover i.encuestas-home,
+.quick-button a:focus i.encuestas-home,
+.quick-button a:active i.encuestas-home,
+.quick-button a.active i.encuestas-home{
+	background: url('../img/btn/encuestas-home.png') no-repeat center center;}
+	
+@media(min-width:768px) { .quick-button { margin-bottom: 30px;}	}
+
+/***************************** MINI WIDGET METAS ********************************/ 
+.goals { margin-top: 10px; margin-bottom: 15px; text-align: center;}
+.goals-heading {display: inline-block;position: relative;text-align: center;vertical-align: bottom;margin: 0 auto -40px;}
+.goals-heading .goal-chart {display: block; text-align:center; margin:10px auto; width:80px; height:80px;	}
+.goals-content {padding-top: 50px; -webkit-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15); box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15);}
+.goals-number {padding: 5px 0 15px; font-size: 26px; font-weight: 300; line-height: 1;font-family: "RobotoBold", Helvetica, Arial, sans-serif;}
+.goals-description { text-transform: uppercase;font-family: "RobotoCondensed", Helvetica, Arial, sans-serif; font-weight:700;}
+.goals-description ul.list-unstyled li {
+	text-transform: none; text-align:left; font-size: 13px; line-height: 17px;font-family: "RobotoMedium", Helvetica, Arial, sans-serif; font-weight:300;}
+.goals-footer {display: block; overflow: hidden; text-overflow: ellipsis; width: 100%; white-space: nowrap; padding: 5px; font-size:14px; background-color: rgba(0,0,0,0.1); transition: all ease-in-out .3s; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25); letter-spacing: 0.075em;font-family: "RobotoBoldCondensed", Helvetica, Arial, sans-serif;text-transform:uppercase; cursor:default;}
+/*	Gráficas */	
+.goal-chart{font-family: 'RobotoBold', Helvetica, Arial, sans-serif; display:block; position:relative; -webkit-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0,0,0,0.2),0 0 0 4px rgba(0,0,0,0.1); -moz-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0,0,0,0.2),0 0 0 4px rgba(0,0,0,0.1); box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0,0,0,0.2),0 0 0 4px rgba(0,0,0,0.1);-webkit-border-radius:100%;-moz-border-radius:100%;-ms-border-radius:100%;-o-border-radius:100%;border-radius:100%; }
+.goal-chart input{ font-family: 'RobotoBold', Helvetica, Arial, sans-serif; cursor:default; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow:none; border:0; height:auto; position:absolute; top:-6px; left:73px; padding:5px 0!important; font-size:23px!important;}
+.goal-chart .percentages{font-size:14px;position:absolute;top:40%;margin-left:54px}

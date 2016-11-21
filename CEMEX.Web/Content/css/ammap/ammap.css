@@ -1,0 +1,92 @@
+.ammapAlert {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    font-family:"RobotoRegular",verdana,helvetica,arial,sans-serif;
+    font-size:14px;
+	line-height:34px;
+    color:#CC0000;}
+.ammapDescriptionWindow {
+   font-size:14px;
+   font-family:verdana,helvetica,arial,sans-serif;
+   background-color:#e1e9fb;
+   border-style:solid;
+   border-color:#0060c1;
+   border-width:1px;
+   color:#003A74;
+   padding:8px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;}
+.ammapDescriptionTitle {
+   font-family: "DroidSansBold",verdana,helvetica,arial,sans-serif;
+    font-size: 18px;
+	line-height:38px;
+    font-weight: normal;}
+.ammapDescriptionWindowCloseButton {}
+.ammapObjectList ul {
+    padding-left:20px;
+    list-style:square outside;
+    color:#999999;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 12px;}
+.ammapObjectList ul ul { padding-left:14px;}
+.ammapObjectList a { color:#000000;}
+.ammapObjectList a {
+    color:#000000;
+    text-decoration:none;
+    display:block;
+    padding:2px;}
+.ammapObjectList a:hover {
+    color:#CC0000;
+    text-decoration:none;
+    background:#FFFFFF;
+    cursor:pointer;
+    display:block;}
+.ammapDescriptionText {	overflow: auto;
+   font-family: "DroidSans",verdana,helvetica,arial,sans-serif;}
+.amChartsPlotArea {}
+
+.background-darkpurple {background-color: #525263; color: #ffffff;}
+.background-evendarkerpurple {background-color: #3f3f4f; color: #ffffff;}
+.background-gray {background-color: #f3f3f4;}
+.background-white {background-color: #ffffff;}
+.background-turquoise {background-color: #dff4f9;}
+.background-lightblue {background-color: #e1e9fb;}
+.background-brightblue {background-color: #f4f6fc;}
+.background-map-grid { background: #e1e9fb url('../../img/ammap/bg_map_grid.png') no-repeat local center top / 100% auto;}
+.map-bg { background: rgba(0, 0, 0, 0) url('../../img/ammap/map_bg_shadow.png') no-repeat local center top / auto 100%;
+    padding: 60px 0;	}
+#mapdiv, #chartdiv{
+	display:block;
+	position:relative;
+	height:392px;
+	width: 715px;
+	margin:0 auto;}
+	
+.map-container { background-color: rgba(223, 244, 249, 0.35);}
+	
+
+	
+/************************ MAPA ***************************/
+.ammapDescriptionWindow {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    color: #004ab1;
+    font-family:'Regular', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 8px; border-radius:4px;
+    border: 1px solid rgba(234, 238, 250, 0.6);
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);}
+	
+/* ------------------------------------------------------------------- */
+/*	Adaptativo
+/* ------------------------------------------------------------------- */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	.map-bg { background-size:auto 400px;}
+	#mapdiv { height:285px; width: 560px;} 
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+	.map-bg { background-size:auto 270px;}
+	#mapdiv { height:155px; width: 280px;} 
+}

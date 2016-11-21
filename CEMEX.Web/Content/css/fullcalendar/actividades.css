@@ -1,0 +1,204 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá, Agosto 2, 2016
+=================================================================== */
+/* ------------------------------------------------------------------- */
+/*	STATUS DE PROSPECTOS EN HOME
+/* ------------------------------------------------------------------- */
+.background-fase-01,
+.background-fase-02,
+.background-fase-03,
+.background-fase-04,
+.background-fase-05,
+.background-detalle-fases {
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);color: #ffffff;
+    display: block;
+    height: 140px;
+    padding: 20px 5px;
+    position: relative;
+    text-align: center;}
+	
+.background-fase-01 p,
+.background-fase-02 p,
+.background-fase-03 p,
+.background-fase-04 p,
+.background-fase-05 p,
+.background-detalle-fases p {
+	display: block;
+    font-family: "Bold",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    height: 40px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;}
+.background-fase-01 h1,
+.background-fase-02 h1,
+.background-fase-03 h1,
+.background-fase-04 h1,
+.background-fase-05 h1,
+.background-detalle-fases h1 {
+	display: block;position: relative; width:100%; font-family:"Bold",Arial,Helvetica,sans-serif; font-size:46px; margin-top:10px; line-height:46px;}
+
+.background-fase-01 { background:rgba(255,29,37,1);}
+
+.background-fase-02 { background:rgba(255,129,15,1);}
+
+.background-fase-03 { background:rgba(255,196,0,1);}
+
+.background-fase-04 { background:rgba(202,187,0,1);}
+
+.background-fase-05 { background:rgba(124,175,0,1);}
+
+.background-detalle-fases { background:#d9edf7; color:#31708f; text-shadow: 2px 2px 1px rgba(255, 255, 255, 1); }
+@media (min-width:768px) and (max-width:991px){
+	.background-fase-01,
+.background-fase-02,
+.background-fase-03,
+.background-fase-04,
+.background-fase-05,
+.background-detalle-fases {
+    height: 75px;
+    padding: 20px 25px;
+    text-align: center;}
+.background-fase-01 p,
+.background-fase-02 p,
+.background-fase-03 p,
+.background-fase-04 p,
+.background-fase-05 p,
+.background-detalle-fases p {
+    display: inline-block;
+    float: left;
+    height: 75px;
+    line-height: 14px;
+    width: 50%;}
+.background-fase-01 h1,
+.background-fase-02 h1,
+.background-fase-03 h1,
+.background-fase-04 h1,
+.background-fase-05 h1,
+.background-detalle-fases h1 {
+	display: inline-block;
+	line-height:26px;
+    float: left;
+    width: 50%;}
+	}
+@media screen and (max-width:767px){
+	.background-fase-01,
+.background-fase-02,
+.background-fase-03,
+.background-fase-04,
+.background-fase-05,
+.background-detalle-fases {
+    height: 75px;
+    padding: 10px 15px;}
+.background-fase-01 p,
+.background-fase-02 p,
+.background-fase-03 p,
+.background-fase-04 p,
+.background-fase-05 p,
+.background-detalle-fases p {
+	display: inline-block;
+    float: left;
+    line-height: 14px;
+    padding: 0;
+    width: 60%;}
+.background-fase-01 h1,
+.background-fase-02 h1,
+.background-fase-03 h1,
+.background-fase-04 h1,
+.background-fase-05 h1,
+.background-detalle-fases h1 {	
+	display: inline-block;
+    float: left;
+    line-height: 55px;
+    margin: 0;
+    width: 40%;}
+	}
+/* ------------------------------------------------------------------- */
+/*	ACTIVIDADES CALENDARIO
+/* ------------------------------------------------------------------- */
+.activitiesList {display: block; width:100%; margin: 5px auto 0;}
+.nav-tabs.activitiesList>li>a{
+	border-radius:5px 5px 0 0;
+	padding:10px 0;
+	margin-right:0px;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	border-right: 1px solid rgba(0, 0, 0, 0.25);
+	border-left: 1px solid rgba(255, 255, 255, 0.25);
+	height:75px;
+	min-height: 75px;}
+.nav-tabs.activitiesList>li{
+	border-radius:5px 5px 0 0;
+	background-color: rgba(0, 0, 0, 1) !important;
+	width:33.333333%;}
+.nav-tabs.activitiesList>li>a i{ font-size: 14px; line-height: 16px;display:block; width:100%; text-align:center;}
+.nav-tabs.activitiesList>li>a p{ font-size: 9px; line-height: 20px;display:block; width:100%; text-align:center; margin:0; padding:0;}
+.nav-tabs.activitiesList>li+li{ margin-left:0px}
+.nav-stacked.activitiesList > li + li { margin-left: 0; margin-top: 0;}
+.nav-tabs.activitiesList>li>a:hover,
+.nav-tabs.activitiesList>li>a:focus{
+	border: 1px solid rgba(0,0,0,0);
+	border-right: 1px solid rgba(0, 0, 0, 0.25);
+	border-left: 1px solid rgba(255, 255, 255, 0.4);}
+.nav-tabs.activitiesList>li.active>a,
+.nav-tabs.activitiesList>li.active>a:hover,
+.nav-tabs.activitiesList>li.active>a:focus{
+	-webkit-box-shadow:0 0 0 rgba(0, 0, 0, 0) inset;
+	-moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+	-ms-box-shadow:0 0 0 rgba(0, 0, 0, 0) inset;
+	-o-box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset;
+	box-shadow:0 0 0 rgba(0, 0, 0, 0) inset}
+
+.nav-tabs.activitiesList>li>a.btnSales{
+	background-color: rgba(228, 108, 10, 0.75) !important; color:#FFFFFF;
+	-webkit-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-ms-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-o-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;}
+.nav-tabs.activitiesList>li>a.btnSales:hover,
+.nav-tabs.activitiesList>li>a.btnSales:focus{
+	background-color: rgba(228, 108, 10, 0.9) !important;}	
+.nav-tabs.activitiesList>li.active>a.btnSales,
+.nav-tabs.activitiesList>li.active>a.btnSales:hover,
+.nav-tabs.activitiesList>li.active>a.btnSales:focus{
+	background-color: rgba(228, 108, 10, 1) !important; color:#FFFFFF;}
+	
+.nav-tabs.activitiesList>li>a.btnManagementSales{
+	background-color: rgba(124,175,0, 0.75) !important; color:#FFFFFF;
+	-webkit-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-ms-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-o-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;}
+.nav-tabs.activitiesList>li>a.btnManagementSales:hover,
+.nav-tabs.activitiesList>li>a.btnManagementSales:focus{
+	background-color: rgba(124,175,0, 0.9) !important;}	
+.nav-tabs.activitiesList>li.active>a.btnManagementSales,
+.nav-tabs.activitiesList>li.active>a.btnManagementSales:hover,
+.nav-tabs.activitiesList>li.active>a.btnManagementSales:focus{
+	background-color: rgba(124,175,0, 1) !important; color:#FFFFFF;}
+	
+.nav-tabs.activitiesList>li>a.btnManagement{
+	background-color: rgba(128,128,128, 0.75) !important; color:#FFFFFF;
+	-webkit-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-ms-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	-o-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+	box-shadow:0 5px 5px rgba(0, 0, 0, 0.15) inset;}	
+.nav-tabs.activitiesList>li>a.btnManagement:hover,
+.nav-tabs.activitiesList>li>a.btnManagement:focus{
+	background-color: rgba(128,128,128, 0.9) !important;}	
+.nav-tabs.activitiesList>li.active>a.btnManagement,
+.nav-tabs.activitiesList>li.active>a.btnManagement:hover,
+.nav-tabs.activitiesList>li.active>a.btnManagement:focus{
+	background-color: rgba(128,128,128, 1) !important; color:#FFFFFF;}

@@ -1,0 +1,1423 @@
+﻿@model CEMEX.Web.Models.ViewModelRolCrear
+
+@{
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<div id="page-content">
+    <h1 class="page-header"><i class="modulo-configuracion"></i> Configuracion</h1>
+
+    <section id="widget-grid">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <!--================= Inicia Widget (cada widget requiere un ID único) ==================-->
+                <div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-deletebutton="false">
+                    <header> <h2>Alta de Roles</h2> </header>
+                    <div>
+                        <div class="jarviswidget-editbox"> <input class="form-control" type="text"> </div>
+
+                        <div class="widget-body">
+
+                            <div class="expediente-tabs">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#info" aria-controls="informacion general" role="tab" data-toggle="tab">
+                                            Información General
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#funcionalidadesWeb" aria-controls="funcionalidades" role="tab" data-toggle="tab">
+                                            Funcionalidades Web
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#funcionalidadesApp" aria-controls="funcionalidades" role="tab" data-toggle="tab">
+                                            Funcionalidades Móvil
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active fade in" id="info">
+                                        <form role="form">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <legend>Información General</legend>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-sm-12">Nombre del Rol</label>
+                                                            <input type="text" class="form-control col-sm-12" placeholder="Nombre del Rol">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-sm-12">Descripción del Rol</label>
+                                                            <textarea class="form-control col-sm-12" placeholder="Descripción del Rol" rows="7" cols="15"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            @for (int indexJerarquia = 0; indexJerarquia < Model.Jerarquias.Count; indexJerarquia++)
+                                                            {
+                                                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                                                                    <div class="radio">
+                                                                        <label> 
+                                                                            @Html.RadioButtonFor( m => m.IdJerarquia, @Model.Jerarquias[indexJerarquia].Id)
+                                                                            @Model.Jerarquias[indexJerarquia].Nombre
+                                                                        </label>
+                                                                     </div>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group pull-right">
+                                                            <label class="control-label">Status del registro</label>
+                                                            <div class="make-switch" data-text-label="Status" data-on-label="<i class='gi-ok_2'></i> &nbsp; Activo" data-off-label="<i class='gi-remove_2'></i> &nbsp; Inactivo" data-on="success" data-off="danger">
+                                                                <input class="form-control" type="checkbox" checked="checked">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="funcionalidadesWeb">
+                                        <form role="form">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <legend>Funcionalidades Web</legend>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="alert alert-info" role="alert">
+                                                            Selecciona un ícono para autorizar el acceso a esa funcionalidad. O marca el nombre de la funcionalidad para seleccionarlos todos.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div id="funcionalidadesWeb-panel-01" class="panel-group">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <a href="#funcionalidadesWeb-box-01" data-parent="#funcionalidadesWeb-panel-01" data-toggle="collapse">
+                                                                        <h3 class="panel-title">Nombre del Módulo <i class="fa fa-caret-down"></i></h3>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="funcionalidadesWeb-box-01" class="panel-collapse fade collapse">
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span><input type="checkbox" value=""><p>Carga Masiva</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Guardar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Consultar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Eliminar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Editar</p> </span>
+                                                                                        <span><input type="checkbox" value=""><p>Status</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Clonar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Exportar</p> </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="funcionalidadesWeb-panel-02" class="panel-group">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <a href="#funcionalidadesWeb-box-02" data-parent="#funcionalidadesWeb-panel-02" data-toggle="collapse">
+                                                                        <h3 class="panel-title">Nombre del Módulo <i class="fa fa-caret-down"></i></h3>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="funcionalidadesWeb-box-02" class="panel-collapse fade collapse">
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span><input type="checkbox" value=""><p>Carga Masiva</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Guardar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Consultar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Eliminar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Editar</p> </span>
+                                                                                        <span><input type="checkbox" value=""><p>Status</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Clonar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Exportar</p> </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="funcionalidadesWeb-panel-03" class="panel-group">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <a href="#funcionalidadesWeb-box-03" data-parent="#funcionalidadesWeb-panel-03" data-toggle="collapse">
+                                                                        <h3 class="panel-title">Nombre del Módulo <i class="fa fa-caret-down"></i></h3>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="funcionalidadesWeb-box-03" class="panel-collapse fade collapse">
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span><input type="checkbox" value=""><p>Carga Masiva</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Guardar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Consultar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Eliminar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Editar</p> </span>
+                                                                                        <span><input type="checkbox" value=""><p>Status</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Clonar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Exportar</p> </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="funcionalidadesApp">
+                                        <form role="form">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <legend>Funcionalidades Móvil</legend>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="alert alert-info" role="alert">
+                                                            Selecciona un ícono para autorizar el acceso a esa funcionalidad. O marca el nombre de la funcionalidad para seleccionarlos todos.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div id="funcionalidadesApp-panel-01" class="panel-group">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <a href="#funcionalidadesApp-box-01" data-parent="#funcionalidadesApp-panel-01" data-toggle="collapse">
+                                                                        <h3 class="panel-title">Nombre del Módulo <i class="fa fa-caret-down"></i></h3>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="funcionalidadesApp-box-01" class="panel-collapse fade collapse">
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span><input type="checkbox" value=""><p>Carga Masiva</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Guardar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Consultar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Eliminar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Editar</p> </span>
+                                                                                        <span><input type="checkbox" value=""><p>Status</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Clonar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Exportar</p> </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="funcionalidadesApp-panel-02" class="panel-group">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <a href="#funcionalidadesApp-box-02" data-parent="#funcionalidadesApp-panel-02" data-toggle="collapse">
+                                                                        <h3 class="panel-title">Nombre del Módulo <i class="fa fa-caret-down"></i></h3>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="funcionalidadesApp-box-02" class="panel-collapse fade collapse">
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span><input type="checkbox" value=""><p>Carga Masiva</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Guardar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Consultar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Eliminar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Editar</p> </span>
+                                                                                        <span><input type="checkbox" value=""><p>Status</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Clonar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Exportar</p> </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="funcionalidadesApp-panel-03" class="panel-group">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <a href="#funcionalidadesApp-box-03" data-parent="#funcionalidadesApp-panel-03" data-toggle="collapse">
+                                                                        <h3 class="panel-title">Nombre del Módulo <i class="fa fa-caret-down"></i></h3>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="funcionalidadesApp-box-03" class="panel-collapse fade collapse">
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="checkbox">
+                                                                                        <label> <input type="checkbox" role="button"> <p>subMódulo</p></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span><input type="checkbox" value=""><p>Carga Masiva</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Guardar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Consultar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Eliminar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Editar</p> </span>
+                                                                                        <span><input type="checkbox" value=""><p>Status</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Clonar</p></span>
+                                                                                        <span><input type="checkbox" value=""><p>Exportar</p> </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="btn-select" data-toggle="buttons">
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcCmasiva">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcGuardar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcConsultar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEliminar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcEditar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check txt-color-white"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcStatus">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcClonar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                        <span>
+                                                                                            <label class="btn bg-funcExportar">
+                                                                                                <input type="checkbox" value="">
+                                                                                                <i class="fa fa-check"></i>
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="btn-group pull-right" role="group">
+                                                <button class="btn tm btn-danger"><i class="eliminar"></i> Eliminar</button>
+                                                <button class="btn tm btn-info"><i class="editar"></i> Editar</button>
+                                                <button class="btn tm btn-warning"><i class="fa fa-remove"></i> Cancelar</button>
+                                                <button class="btn tm btn-success"><i class="guardar"></i> Guardar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--================================== Termina Widget ===================================-->
+            </article>
+        </div>
+
+    </section>
+</div>
+

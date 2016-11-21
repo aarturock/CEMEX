@@ -1,0 +1,237 @@
+/* ================================================================ 
+Copyright (c) 2013-2016 Telstock, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá,  Julio 29, 2016
+=================================================================== */
+
+/* CSS Document */
+
+/*************** GLOBAL ***************/	
+*{ margin: 0; outline:none !important; -webkit-touch-action: manipulation; -moz-touch-action: manipulation; -ms-touch-action: manipulation; -o-touch-action: manipulation; touch-action: manipulation;}
+
+html, body {
+	width:100%;
+	height: 100%;
+	min-height: 100%;
+	overflow-x:hidden;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing: subpixel-antialiased;
+	   -moz-font-smoothing: subpixel-antialiased;
+	    -ms-font-smoothing: subpixel-antialiased;
+	     -o-font-smoothing: subpixel-antialiased;
+	        font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: 100%;
+	   -moz-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+	     -o-text-size-adjust: 100%;
+	        text-size-adjust: 100%;
+	text-rendering: optimizelegibility;}	
+			
+body, button, input, textarea, select, .btn {
+    -webkit-font-smoothing: antialiased;
+	   -moz-font-smoothing: antialiased;
+	    -ms-font-smoothing: antialiased;
+	     -o-font-smoothing: antialiased;
+	        font-smoothing: antialiased;}
+			
+body { background: #F0F0F0 url('background.jpg') no-repeat fixed center center / cover;
+	color:#333333; font-family: "Book", Helvetica, Arial, sans-serif; font-size:16px; padding-top: 50px; }
+
+.background {height: auto !important; margin: 0 auto -38px; min-height: 100%; width: 100%;}
+
+
+::-webkit-selection { background: #669900; color: #FFFFFF; }
+::-moz-selection { background: #669900; color: #FFFFFF;  }
+::-ms-selection { background: #669900; color: #FFFFFF; }
+::selection { background: #669900; color: #FFFFFF; }
+	
+/*-----------------------------------------------------*/
+/*	TEXTOS
+/*-----------------------------------------------------*/
+h1{font-family:'Light', Helvetica, Arial, sans-serif;font-size:42px;line-height:46px;}
+h2{font-family:'Light', Helvetica, Arial, sans-serif;font-size:36px;line-height:40px;}
+h3{font-family:'Light', Helvetica, Arial, sans-serif;font-size:30px;line-height:34px;}
+h4{font-family:'Regular', Helvetica, Arial, sans-serif;font-size:24px;line-height:28px;}
+h5{font-family:'Bold', Helvetica, Arial, sans-serif;font-size:20px;line-height:24px;}
+h6{font-family:'Bold', Helvetica, Arial, sans-serif;font-size:18px;line-height:22px;}
+
+p{font-family:'Regular', Helvetica, Arial, sans-serif;font-size:16px;line-height:20px;}
+
+/*-----------------------------------------------------------------------------------*/
+/*	01.	Login
+/*-----------------------------------------------------------------------------------*/
+::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+:-moz-placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+::-moz-placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+:-o-placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+::-o-placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+:-ms-input-placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+:placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+::placeholder {color: rgba(0, 0, 0, 0.7) !important;}
+
+#main {
+    height: auto;
+    margin: 0 auto 25px;
+    min-height: 100%;
+    width: 100%;
+	display:block;}
+#login > header > h1 {
+	font-weight: lighter;
+	color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 1);}
+#login .logo {
+	height: auto;
+	margin: 0 auto;
+	display:block;
+	position:relative;
+	text-align: center;
+    width: 100%;}
+
+#login .logo img{
+	display: block;
+    height: auto;
+    margin: 0px auto 20px;
+    position: relative;
+    width: 100%;}
+#login .box {
+	border-radius: 25px;
+    display: block;
+    padding: 30px 0px;
+	margin:0 auto 50px;
+    position: relative;
+	background-color:#FFFFFF;
+   border: 1px solid #999999;
+   -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.25);
+   -moz-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.25);
+   -ms-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.25);
+   -o-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.25);
+   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.25);
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -ms-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;}
+#login .box:before {
+	content:"\f0d7";
+	bottom: -20px;
+    color: #ffffff;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 140px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    left: 40%;
+    width: 140px;}
+[class="form-type-"] { position: absolute; top: 50%;}
+#login .login-control {
+	font-family: "Regular", Helvetica, Arial, sans-serif;
+    background: #ffffff none repeat scroll 0 0;
+    border-color: #669900 #669900 #669900 transparent;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px 0;
+    color: #333333;
+    line-height: 38px;
+    padding: 0 12px 0 6px;
+    width: 100%;
+		-webkit-box-shadow:none;
+		   -moz-box-shadow:none;
+			-ms-box-shadow:none;
+			 -o-box-shadow:none;
+				box-shadow:none;}
+#login .login-control:focus {
+    background: #FFFFFF none repeat scroll 0 0;
+	border-width: 1px 1px 1px 0;
+	border-style: solid solid solid none;
+	border-color: #669900 #669900 #669900 transparent;
+		-webkit-box-shadow:none;
+		   -moz-box-shadow:none;
+			-ms-box-shadow:none;
+			 -o-box-shadow:none;
+				box-shadow:none;}
+#login .login-control.form-control {height: 36px;}
+#box-login .input-group-addon {
+    background: #FFFFFF none repeat scroll 0 0;
+    border-radius: 0;
+    color: #669900;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 6px 15px;
+    text-align: center;
+	height:auto;
+	border-width: 1px 0 1px 1px;
+	border-style: solid none solid solid;
+	border-color: #669900 transparent #669900 #669900;}
+
+#box-login .alert {
+    border: 1px solid transparent;
+    border-radius: 0;
+    margin-bottom: 15px;
+    line-height: 38px;
+    padding: 0 15px;}
+#login .pin {
+	height: auto;
+	margin: 0px auto 0;
+	width:100%;
+	display:block;
+	position:relative;}
+#login .pin img{
+	display: block;
+    height: auto;
+    margin: 0px auto;
+    position: relative;
+    width: 100%;}
+	
+.alert .form-group { margin-bottom: 0;}
+.alert label { font-size:12px; font-weight: normal;margin-bottom: 0px;}
+
+.error {color: #FFFFFF; text-align: center; margin: 0px auto;text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);}
+.error h1 {font-family: "Bold",Helvetica,Arial,sans-serif;
+    font-size: 7em;
+    line-height: 1em;
+    }
+.error p {font-size: 18px; line-height: 22px; margin-bottom:30px;}
+	
+/*-----------------------------------------------------*/
+/*	ADAPTATIVO
+/*-----------------------------------------------------*/
+/******************* Login **********************/
+@media (min-width: 768px) {
+	#login { padding: 0px 30px;}
+}
+@media (max-width: 767px) {  
+	#login { padding: 30px 15px;}
+	#login .logo img { margin: 0 auto 0px;}
+	#login .box { margin:0px auto 50px;}
+}
+	
+/***************************** FOOTER ********************************/
+footer {padding: 10px 0;
+	background: #353935;border-top:1px solid #F0F0F0;
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.9);
+	   -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.9);
+	    -ms-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.9);
+	     -o-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.9);
+	        box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.9);}	
+footer .logo {padding:10px 0; text-align: center; margin-bottom: 0;}
+footer .logo img {text-align: center; display: inline-block;} 
+footer .copy { color: #CCCCCC;text-align: right;}
+footer .copy p {padding-right: 45px; font-size: 11px; line-height:15px;font-family: 'Book', Helvetica, Arial, sans-serif;font-weight:normal;}
+footer hr { border-color: rgba(242, 242, 242, 0.25);border-width: 1px 0 0;border-image: none; border-style: solid;}
+footer .copy p i {font-size: 14px; line-height:20px; display: inline-block; margin-right:3px;}
+footer a, footer span { color: #FFFFFF; text-decoration:none;}
+footer a:hover, footer span:hover { color: #AFD136; text-decoration:none;}
+footer span { border-color: rgba(242, 242, 242, 0.25);border-image: none; border-style: solid; border-width: 0 0 0 1px; padding-left:15px; margin-left:15px;}
+  
+.input-group.date .input-group-addon span {
+  display: block; cursor: pointer; width: 16px; height: 16px; margin-top: -9px;} 
+  
+  
+footer a, footer span {text-decoration:none; cursor:pointer;}
+footer span {padding-left:15px; margin-left:15px; border-image: none; border-style: solid; border-width: 0 0 0 1px;}
+footer a:hover, footer span:hover {text-decoration: none; text-align:center;}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+footer .copy p {padding-top:0px;	 text-align:center;}	}

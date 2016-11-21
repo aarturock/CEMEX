@@ -1,0 +1,133 @@
+/* ================================================================ 
+Copyright (c) 2013-2014 Tarjetas del Noreste, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá,  Junio 16, 2014
+=================================================================== */
+@charset "UTF-8";
+/* CSS Document */
+
+/******************* GALERIA DE IMÁGENES Y ARCHIVOS **********************/
+.BOGallery .thumbnail {
+	text-align: center;
+	margin-bottom:10px;
+	display:block;
+	padding:0px;
+	line-height: normal;
+	background-color: #F0F0F0;
+	border:1px solid #AFD136;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+	-webkit-transition:all 0.2s ease-in-out 0s;
+	-moz-transition:all 0.2s ease-in-out 0s;
+	-o-transition:all 0.2s ease-in-out 0s;
+	transition:all 0.2s ease-in-out 0s;}  
+.BOGallery .thumbnail > img {
+	display: inline-block;
+	position:relative;
+	max-height: 100%;
+	vertical-align:middle !important;}
+.BOGallery .img_file {
+	display: block;
+	height: auto;
+	background:#F0F0F0;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px; max-width: 100%;}
+	
+.BOGallery .img_file.thumbnail {width: 100%;}	
+  
+.BOGallery .title_file {
+    font-family: 'RobotoCondensed',Arial,Helvetica,sans-serif;
+	text-align: left !important;
+	font-size:16px;
+	line-height:24px;
+	height:24px;
+	padding:0;
+	display: inline-block;
+	width:50%;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;}	
+	
+.BOGallery .title_file a {
+	text-decoration:none;}
+	
+.BOGallery .title_file a:hover,
+.BOGallery .title_file a:focus,
+.BOGallery .title_file a:active {
+	text-decoration:none;}
+
+.BOGallery .title_file i {
+	text-align: right;
+	font-size:18px;
+	line-height:24px;
+	right:0px;
+	float:right;
+	position:relative;
+	padding: 0 5px;
+	display:block;}
+		  
+.BOGallery .autor {
+    font-family: 'RobotoRegular',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+	line-height:18px;
+    font-weight: 300 !important;
+	text-align: left;
+	color: #52524E;
+	padding:10px 0 0 5px;}			  
+.BOGallery .datetime {
+    font-family: 'RobotoRegular',Arial,Helvetica,sans-serif;
+	text-transform:uppercase;
+	text-align: left;
+	font-size:10px;
+	line-height:14px;
+	color: #52524E;
+	margin:5px 0 0 0;
+	padding:0 0 0 5px;}
+	
+			  
+/*====== BOTON ABRIR ARCHIVO ======*/
+.BOGallery a.btn {
+	padding:0 !important; margin:0 !important; float: right;}
+.BOGallery i.openfile {
+	display: block; width:24px; height:24px; margin:0; padding: 0; position:relative;
+	background: url("../img/btn/archivo.png") no-repeat center center !important; }
+	
+/* ------------------------------------------------------------------- */
+/*	Filtros de Noticias Anteriores
+/* ------------------------------------------------------------------- */	
+ ul.BOGallery {
+	width:100%;
+	text-align:center;
+	margin:0px auto 15px;
+	padding:10px 0;
+    display: block;}
+ ul.BOGallery li {
+	list-style:none;
+	list-style-type:none;
+	display: block;
+	position:relative;
+	float:left;
+	margin:0 auto;
+	padding:10px;
+	vertical-align: top;
+	-webkit-transition: opacity 150ms;
+	-moz-transition: opacity 150ms;
+	-ms-transition: opacity 150ms;
+	transition: opacity 150ms;
+	width:20%;
+	text-align:left;}
+
+@media (min-width: 0px) and (max-width: 767px) {
+.BOGallery { padding:5px 3px 5px 1px;}
+ ul.BOGallery a.btn { float: left;}
+ .BOGallery .title_file { text-indent:10px;}		}
+@media (min-width: 0px) and (max-width: 480px) {
+ ul.BOGallery li { width:100%;}}
+@media (min-width: 481px) and (max-width: 767px) {
+ ul.BOGallery li {width:50%;}} 
+@media (min-width: 768px) and (max-width: 979px) {
+.BOGallery { padding:10px 3px 10px 1px;}	}
+@media (min-width:992px) { ul.BOGallery li {width:20%;}}
+@media (min-width:1200px) { ul.BOGallery li { width:10%;}}

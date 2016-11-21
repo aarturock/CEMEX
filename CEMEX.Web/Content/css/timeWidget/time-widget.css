@@ -1,0 +1,55 @@
+/* ================================================================ 
+Copyright (c) 2013-2014 Tarjetas del Noreste, S.A. de C.V. Todos los Derechos Reservados.
+
+Elaboró: Vanessa Alejandra Muñoz Corbalá,  Mayo 9, 2014
+=================================================================== */
+@charset "UTF-8";
+/* CSS Document */
+/*	Jumbotron
+/*-----------------------------------------------------------------------------------*/
+.jumbotron{ padding:0px;margin:30px 15px;color:inherit;background-color:#fff}
+.jumbotron h1,.jumbotron .h1{ color:inherit}
+.jumbotron p{ margin-bottom:0px;font-size:1px;font-weight: normal;}
+.jumbotron .container{ max-width:100%}
+
+@media screen and (min-width:768px){
+.jumbotron{ padding-top:0px;padding-bottom:0px}
+.container .jumbotron{ padding-left:0px;padding-right:0px}
+.jumbotron h1,.jumbotron .h1{ font-size:1px}	}
+
+/***************************** TIME WIDGET ********************************/
+.time-widget {
+    margin: 5px 0 0; display:block; position: relative; width:100%; height:200px; margin-right:10px; background-position:0 0; background-repeat:no-repeat;    background-size: cover; background-attachment: local;} 
+.time-widget-box {
+    overflow: hidden; text-align: center; display:block; margin:0 auto 15px;padding: 30px 15px 15px; width:100%;}
+	 
+/* -- Time Widget Tile */  
+.time-widget-box p {
+	font-family: 'DroidSans', Helvetica, Arial, sans-serif; text-transform: uppercase; font-size: 15px; font-weight: 400;}
+.time-widget-box span {
+	font-family: 'DroidSansBold', Helvetica, Arial, sans-serif; font-size: 26px;}
+
+/* -- Imágenes en background que cambian automáticamente dependiendo la hora del día. */
+.morning {
+    background: url(../img/time-widget/morning.jpg) 0 0 no-repeat;
+    background-size: cover;}
+.afternoon {
+    background: url(../img/time-widget/afternoon.jpg) 0 0 no-repeat;
+    background-size: cover;}
+.evening {
+    background: url(../img/time-widget/evening.jpg) 0 0 no-repeat;
+    background-size: cover;}
+.midnight {
+    background: url(../img/time-widget/midnight.jpg) 0 0 no-repeat;
+    background-size: cover;}
+	
+@media(min-width:992px) {
+.time-widget { background-position: 0 0;}	}
+@media(min-width:1200px) {
+.time-widget { background-position: 0 0;}
+.time-widget-box { width:100%;}	}
+@media(min-width:768px) {
+.time-widget { margin-bottom: 30px;}	}
+@media(max-width:630px) {
+.time-widget-box {
+	float: none; width:100%; margin:5px auto; text-shadow: 2px 2px 3px #000000;}	}

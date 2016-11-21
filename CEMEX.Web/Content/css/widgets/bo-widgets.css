@@ -1,0 +1,440 @@
+ 
+/* ---------------------------------------------------------------------- */
+/*	Main
+/* ---------------------------------------------------------------------- */
+.bowidget{
+	margin                : 0 0 30px 0;
+	position              : relative;
+	-moz-border-radius    : 3px;
+	-khtml-border-radius  : 3px;
+	-webkit-border-radius : 3px;
+	border-radius         : 3px;
+	padding               : 0;
+	-webkit-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.15);}
+.widget-content-padding{
+	padding :0 !important;}
+.widget-content-padding .well {
+	margin-bottom:0px;}
+.bowidget-ajax-placeholder {
+	padding:10px;}
+	
+/* ---------------------------------------------------------------------- */
+/*	Header
+/* ---------------------------------------------------------------------- */
+.bowidget > header{
+	height      : 34px; /* ".bowidget-loader" debe tener la misma altura para mostrar el texto al minimizar el widget */
+	padding     : 0 0 0 10px;
+	line-height : 40px;}
+.ui-sortable .bowidget-sortable > header{
+	cursor : move;
+	box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+	-moz-border-radius    : 3px 3px 0px 0px;
+	-khtml-border-radius  : 3px 3px 0px 0px;
+	-webkit-border-radius : 3px 3px 0px 0px;
+	border-radius         : 3px 3px 0px 0px;} 
+.ui-sortable .bowidget-sortable.bowidget-collapsed > header {
+	-moz-border-radius    : 3px;
+	-khtml-border-radius  : 3px;
+	-webkit-border-radius : 3px;
+	border-radius         : 3px;}
+.bowidget > header h2 {
+	font-family: 'RobotoMedium', Helvetica, Arial, sans-serif;
+	height: 100%;
+	width: 70%;
+	float: left;
+	font-size: 14px;
+	display:block;
+	position: relative;
+	margin: 0;
+	line-height: 34px;	
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 0px;
+    left: 0px;}
+.bowidget > header .bowidget-icon{
+	width    : 16px;
+	height   : 16px;
+	float    : left;
+	margin   : 12px 10px 0 0;
+	display  : block;
+	zoom     : 1;
+	z-index  : 4000}  
+.bowidget-ctrls{
+	width   : auto;
+	float   : right;
+	padding : 5px 2px 0 0;
+	margin  : 0;}
+.bowidget-ctrls .button-icon{
+	width: 22px;
+	height: 22px;
+	float: left;
+	-moz-border-radius: 100%;
+	-khtml-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	position: relative;
+	margin: 0 10px 5px 0;
+	font-size: 13px;}	
+.bowidget-loader{
+	width: 30px;
+	height: 34px;
+	margin: 0;
+	float: right;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: none;}
+
+/* ---------------------------------------------------------------------- */
+/*	Content
+/* ---------------------------------------------------------------------- */
+.bowidget > div{
+	float: left;
+	width: 100%;
+	min-height: 20px;
+	position: relative;
+	font-size: 14px;
+	-moz-border-radius: 0px 0px 3px 3px;
+	-khtml-border-radius: 0px 0px 3px 3px;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+	margin: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-top: none;
+	border-right-color: #E8E8E8 !important;
+	border-bottom-color: #E8E8E8 !important;
+	border-left-color: #E8E8E8 !important;} 
+
+/* ---------------------------------------------------------------------- */
+/*	Editbox
+/* ---------------------------------------------------------------------- */
+.bowidget-editbox{
+	display : none;
+		padding : 10px;}
+.bowidget-editbox div{
+		width         : 100%;
+		float         : left;
+		margin-bottom : 5px;}
+.bowidget-editbox label{
+	font-family: 'RobotoCondensed', Helvetica, Arial, sans-serif;
+	color:#454945;
+	width       : 80px;
+	height      : 26px;
+	float       : left;
+	line-height : 26px;
+	letter-spacing: 0.075em;
+	text-transform:uppercase;}
+.bowidget-editbox input{
+		width   : 200px;
+		height  : 24px;
+		padding : 0 5px;}
+.bowidget-editbox span{
+		height : 26px;
+		width  : 26px;
+		float  : left;
+		margin : 0 5px 0 0;
+		cursor : pointer;}
+
+/* ---------------------------------------------------------------------- */
+/*	Timestamp
+/* ---------------------------------------------------------------------- */
+.bowidget-timestamp{ 
+	font-size: 12px;
+	color: #868686;
+	margin: 10px 20px 0;}
+
+/* ---------------------------------------------------------------------- */
+/*	Helpers
+/* ---------------------------------------------------------------------- */
+.bowidget-placeholder{
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 28px;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;   
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;	 
+	box-sizing: border-box;	}
+
+/* ---------------------------------------------------------------------- */
+/*	Fullscreen
+/* ---------------------------------------------------------------------- */
+body.nooverflow{
+	overflow : hidden;
+	position : fixed;}
+#bowidget-fullscreen-mode{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;}
+#bowidget-fullscreen-mode .bowidget{
+	margin: 0;
+	-moz-border-radius: 0;
+	-khtml-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;}
+#bowidget-fullscreen-mode .bowidget > div{
+	overflow-y : scroll;
+	-moz-border-radius: 0;
+	-khtml-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;}
+#bowidget-fullscreen-mode > div > header{
+	cursor: default;}
+
+/* ---------------------------------------------------------------------- */
+/*	Styling
+/* ---------------------------------------------------------------------- */
+.bowidget, .fc-event-skin, .modal-header {	 }
+.bowidget > header{
+	color: #333;
+	text-shadow: 0 1px 0 #FFF;
+	border: 1px solid #C2C2C2;
+	background: #fafafa;
+	background: -moz-linear-gradient(top, #fafafa 0%, #efefef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#efefef));
+	background: -webkit-linear-gradient(top, #fafafa 0%,#efefef 100%);
+	background: -o-linear-gradient(top, #fafafa 0%,#efefef 100%);
+	background: -ms-linear-gradient(top, #fafafa 0%,#efefef 100%);
+	background: linear-gradient(to bottom, #fafafa 0%,#efefef 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#efefef',GradientType=0 );}
+
+	
+/* ---------------------------------------------------------------------- */
+/*	Colores Personalizados
+/* ---------------------------------------------------------------------- */
+/* red theme */
+.red-btn,
+.bowidget.red > header, 
+.bowidget.red .fc-event-skin {
+	background: #a90329;
+	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -o-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -ms-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+	border-color: #931313;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+	
+/* green theme */
+.green-btn,
+.bowidget.green > header, 
+.bowidget.green .fc-event-skin {
+	background: #8fc400;
+	background: -moz-linear-gradient(top,  #8fc400 0%, #8fc400 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fc400), color-stop(100%,#8fc400));
+	background: -webkit-linear-gradient(top,  #8fc400 0%,#8fc400 100%);
+	background: -o-linear-gradient(top,  #8fc400 0%,#8fc400 100%);
+	background: -ms-linear-gradient(top,  #8fc400 0%,#8fc400 100%);
+	background: linear-gradient(to bottom,  #8fc400 0%,#8fc400 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc400', endColorstr='#8fc400',GradientType=0 );
+	border-color: #4c9d57;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+	
+/* black theme */
+.black-btn,
+.bowidget.black > header, 
+.bowidget.black .fc-event-skin {
+	background: #3A3A3A;
+	background: -moz-linear-gradient(top,  #4A4A4A 0%, #3A3A3A 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4A4A4A), color-stop(100%,#3A3A3A));
+	background: -webkit-linear-gradient(top,  #4A4A4A 0%,#3A3A3A 100%);
+	background: -o-linear-gradient(top,  #4A4A4A 0%,#3A3A3A 100%);
+	background: -ms-linear-gradient(top,  #4A4A4A 0%,#3A3A3A 100%);
+	background: linear-gradient(to bottom,  #4A4A4A 0%,#3A3A3A 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4A4A4A', endColorstr='#3A3A3A',GradientType=0 );
+	border-color: #222;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+	
+/* purple theme */
+.purple-btn,
+.bowidget.purple > header,
+.bowidget.purple .fc-event-skin {
+	background: #b86de0;
+	background: -moz-linear-gradient(top,  #b86de0 0%, #914cad 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b86de0), color-stop(100%,#914cad));
+	background: -webkit-linear-gradient(top,  #b86de0 0%,#914cad 100%);
+	background: -o-linear-gradient(top,  #b86de0 0%,#914cad 100%);
+	background: -ms-linear-gradient(top,  #b86de0 0%,#914cad 100%);
+	background: linear-gradient(to bottom,  #b86de0 0%,#914cad 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b86de0', endColorstr='#914cad',GradientType=0 );
+	border-color: #6a4395;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+	
+/* dark grey theme */
+.darkgrey-btn,
+.bowidget.darkgrey > header, 
+.bowidget.darkgrey .fc-event-skin {
+	background: #FAFAFA;
+	background: -moz-linear-gradient(top, #FAFAFA 0%, #EFEFEF 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#EFEFEF));
+	background: -webkit-linear-gradient(top, #FAFAFA 0%,#EFEFEF 100%);
+	background: -o-linear-gradient(top, #FAFAFA 0%,#EFEFEF 100%);
+	background: -ms-linear-gradient(top, #FAFAFA 0%,#EFEFEF 100%);
+	background: linear-gradient(to bottom, #FAFAFA 0%,#EFEFEF 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#efefef',GradientType=0 );
+	border-color: #C2C2C2;
+	color: #333;
+	text-shadow: 0 1px 0 #FFF;}
+.darkgrey-btn {
+	border: 1px solid #CACACA;
+	width: 26px !important;
+	height: 26px !important;}
+	
+/* navy blue theme */
+.navyblue-btn,
+.bowidget.navyblue > header, 
+.bowidget.navyblue .fc-event-skin {
+	background-color: #305F9C;
+	background-image: -moz-linear-gradient(top, #6484C9, #305F9C);
+	background-image: -ms-linear-gradient(top, #6484C9, #305F9C);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6484C9), to(#305F9C));
+	background-image: -webkit-linear-gradient(top, #6484C9, #305F9C);
+	background-image: -o-linear-gradient(top, #6484C9, #305F9C);
+	background-image: linear-gradient(top, #6484C9, #305F9C);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'6484c9, endColorstr='#'305f9c, GradientType=0);
+	border-color: #416992;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+	
+/* yellow theme */
+.yellow-btn,
+.bowidget.yellow > header, 
+.bowidget.yellow .fc-event-skin {
+	background: #e5e696;
+	background: -moz-linear-gradient(top,  #e5e696 0%, #d1d360 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e696), color-stop(100%,#d1d360));
+	background: -webkit-linear-gradient(top,  #e5e696 0%,#d1d360 100%);
+	background: -o-linear-gradient(top,  #e5e696 0%,#d1d360 100%);
+	background: -ms-linear-gradient(top,  #e5e696 0%,#d1d360 100%);
+	background: linear-gradient(to bottom,  #e5e696 0%,#d1d360 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e696', endColorstr='#d1d360',GradientType=0 );
+	border-color     : #BBBB4F;
+	color 			 : #333;
+	text-shadow 	 : 0 1px 0 #FFF;}
+	
+/* pink theme */
+.pink-btn,
+.bowidget.pink > header,
+.bowidget.pink .fc-event-skin,
+.bowidget.pink .dt-footer {
+	background: #cb60b3;
+	background: -moz-linear-gradient(top,  #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cb60b3), color-stop(50%,#c146a1), color-stop(51%,#a80077), color-stop(100%,#db36a4));
+	background: -webkit-linear-gradient(top,  #cb60b3 0%,#c146a1 50%,#a80077 51%,#db36a4 100%);
+	background: -o-linear-gradient(top,  #cb60b3 0%,#c146a1 50%,#a80077 51%,#db36a4 100%);
+	background: -ms-linear-gradient(top,  #cb60b3 0%,#c146a1 50%,#a80077 51%,#db36a4 100%);
+	background: linear-gradient(to bottom,  #cb60b3 0%,#c146a1 50%,#a80077 51%,#db36a4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#db36a4',GradientType=0 );
+	border-color: #E44CC5;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+	
+/* orange theme */
+.orange-btn,
+.bowidget.orange > header, 
+.bowidget.orange .fc-event-skin {
+	background: #feccb1;
+	background: -moz-linear-gradient(top,  #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feccb1), color-stop(50%,#f17432), color-stop(51%,#ea5507), color-stop(100%,#fb955e));
+	background: -webkit-linear-gradient(top,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);
+	background: -o-linear-gradient(top,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);
+	background: -ms-linear-gradient(top,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);
+	background: linear-gradient(to bottom,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e',GradientType=0 );
+	border-color: #E9984D;
+	color: #FFF;
+	text-shadow: 0 1px 0 #333;}
+		
+.bowidget > div{
+	background-color: #fff !important;} 
+.bowidget-editbox{
+	border-bottom: 1px solid #E8E8E8;
+	background-color: #F9F9F9;
+	-webkit-box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.15);}
+.bowidget-editbox input{
+		border: 1px solid #E8E8E8;}
+.bowidget-placeholder{
+	background-color: #F0F0F0;
+	border: 1px solid #E8E8E8;}
+	
+/* ---------------------------------------------------------------------- */
+/*	Clearfix
+/* ---------------------------------------------------------------------- */
+.bowidget-ctrls a > i{
+	color:#FFF;
+	font-size: 16px;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	margin: -1px auto 0 0;
+	text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.4);} 
+
+/* ---------------------------------------------------------------------- */
+/*	Clearfix
+/* ---------------------------------------------------------------------- */
+.bowidget:before,
+.bowidget:after, 
+.bowidget > div:before, 
+.bowidget > div:after,
+.inner-spacer:before, 
+.inner-spacer:after,
+.bowidget-editbox:before, 
+.bowidget-editbox:after,
+.clearfix:before,
+.clearfix:after{
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;}
+.bowidget:after,
+.bowidget > div:after, 
+.inner-spacer:after,
+.bowidget-editbox:after,
+.clearfix:after{
+	clear: both; }
+.bowidget,
+.bowidget > div, 
+.inner-spacer:after,
+.bowidget-editbox,
+.clearfix{
+		zoom: 1;/*IE*/ }
+		
+
+.bowidget.transparent, .bowidget.transparent > div {
+	background:none !important;
+	border:none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:none;
+	margin-bottom:0 !important;	}
+.bowidget.transparent header {
+	display:none;	}
+
+@media screen and (max-width:767px) {
+.bowidget > header h2 {	
+	width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;}}
+		
