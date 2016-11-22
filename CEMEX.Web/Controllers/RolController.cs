@@ -2,6 +2,7 @@
 using CEMEX.Entidades;
 using CEMEX.Web.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace CEMEX.Web.Controllers
@@ -11,17 +12,24 @@ namespace CEMEX.Web.Controllers
         RespuestaData respuesta;
         RolDatos rolDatos;
         JerarquiaDatos jerarquiaDatos;
-
+        ModuloDatos moduloDatos;
 
         List<Rol> roles;
+        List<Modulo> modulos;
+
+
+        public RolController()
+        {
+            rolDatos = new RolDatos();
+            jerarquiaDatos = new JerarquiaDatos();
+            moduloDatos = new ModuloDatos();
+
+        }
 
         public ActionResult Index(ETypeStatusRegistro statusRegistro = ETypeStatusRegistro.Todos)
         {
             ViewBag.EstatusRegistro = EstatusRegistro.GetEstatusRegistro();
-
-            rolDatos = new RolDatos();
             roles = rolDatos.GetRoles(out respuesta, statusRegistro);
-
             if (!respuesta.ExisteError)
             {
                 return View(roles);
@@ -33,14 +41,24 @@ namespace CEMEX.Web.Controllers
 
         public ActionResult Crear()
         {
-            jerarquiaDatos = new JerarquiaDatos();
+         
             ViewModelRolCrear model = new ViewModelRolCrear();
-
-            model.Jerarquias = jerarquiaDatos.GetJerarquias(out respuesta);
+            model.Jerarquias = jerarquiaDatos.GetJerarquias(ref respuesta);
 
             if (!respuesta.ExisteError)
             {
-                return View(model);
+                modulos = moduloDatos.GetModulos(ref respuesta);
+                if (!respuesta.ExisteError)
+                {
+                    model.ModulosMovil = modulos.Where(x => x.IdPlataforma == (int)ETypePlataforma.Movil).ToList();
+                    model.ModulosWeb = modulos.Where(x => x.IdPlataforma == (int)ETypePlataforma.Web).ToList();
+
+                    return View(model);
+                }
+                else
+                {
+                    return View();
+                }                
             }else
             {
                 return View();

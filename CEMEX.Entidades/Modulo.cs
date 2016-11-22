@@ -1,4 +1,6 @@
-﻿namespace CEMEX.Entidades
+﻿using System.Collections.Generic;
+
+namespace CEMEX.Entidades
 {
     public class Modulo
     {
@@ -11,5 +13,6 @@
         public string Icono { get; set; }
         public string Url { get; set; }
         public int IdStatus { get; set; }
+        public List<Pagina> Paginas { get; set; }
     }
 }

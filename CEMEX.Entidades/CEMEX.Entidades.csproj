@@ -43,6 +43,8 @@
     <Compile Include="Codes.cs" />
     <Compile Include="Jerarquia.cs" />
     <Compile Include="Modulo.cs" />
+    <Compile Include="Pagina.cs" />
+    <Compile Include="Permiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />
   </ItemGroup>

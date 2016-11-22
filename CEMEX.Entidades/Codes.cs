@@ -13,4 +13,10 @@
         Inactivo = 2,
         Eliminado = 3
     }
+
+    public enum ETypePlataforma: int
+    {
+        Web = 1,
+        Movil = 2
+    }
 }

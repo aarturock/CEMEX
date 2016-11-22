@@ -12,7 +12,7 @@ namespace CEMEX.Datos
         SqlCommand cmd;
         SqlDataReader reader;
 
-        public List<Jerarquia> GetJerarquias(out RespuestaData respuesta)
+        public List<Jerarquia> GetJerarquias(ref RespuestaData respuesta)
         {
             jerarquias = new List<Jerarquia>();
             respuesta = new RespuestaData();

@@ -12,10 +12,14 @@ namespace CEMEX.Datos
         SqlDataReader reader;
         List<Modulo> modulos;
 
-        public List<Modulo> GetModulos(out RespuestaData respuesta)
+        PaginaDatos paginaDatos;
+
+    
+        public List<Modulo> GetModulos(ref RespuestaData respuesta)
         {
             modulos = new List<Modulo>();
             respuesta = new RespuestaData();
+            paginaDatos = new PaginaDatos();
             try
             {
                 using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["CEMEX"].ConnectionString.ToString()))
@@ -31,12 +35,25 @@ namespace CEMEX.Datos
                     {
                         while (reader.Read())
                         {
-                            //modulos.Add(new Modulo()
-                            //{
-                            //    Id = 
-                            //});
+                            modulos.Add(new Modulo()
+                            {
+                                Id =reader.GetInt32(0),
+                                IdPlataforma = reader.GetInt32(1),
+                                IdRegistroModulo = reader.GetInt32(2),
+                                Orden = reader.GetInt32(3),
+                                Nombre = reader.GetString(4),
+                                Descripcion = reader.GetString(5),
+                                Icono = reader.GetString(6),
+                                Url = reader.GetString(7),
+                                IdStatus = reader.GetInt32(8),
+                                Paginas = paginaDatos.GetPaginasporModulo(ref respuesta, conexion, reader.GetInt32(0))
+                            });
+
                         }
                     }
+
+                    respuesta.ExisteError = false;
+                    respuesta.MensajeException = string.Empty;
                 }
             }
             catch (SqlException exSql)
