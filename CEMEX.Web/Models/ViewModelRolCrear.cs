@@ -9,5 +9,6 @@ namespace CEMEX.Web.Models
         public List<Jerarquia> Jerarquias { get; set; }
         public List<Modulo> ModulosWeb { get; set; }
         public List<Modulo> ModulosMovil { get; set; }
+        public List<Permiso> Permisos { get; set; }
     }
 }

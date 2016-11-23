@@ -13,6 +13,7 @@ namespace CEMEX.Web.Controllers
         RolDatos rolDatos;
         JerarquiaDatos jerarquiaDatos;
         ModuloDatos moduloDatos;
+        PermisoDatos permisoDatos;
 
         List<Rol> roles;
         List<Modulo> modulos;
@@ -23,6 +24,7 @@ namespace CEMEX.Web.Controllers
             rolDatos = new RolDatos();
             jerarquiaDatos = new JerarquiaDatos();
             moduloDatos = new ModuloDatos();
+            permisoDatos = new PermisoDatos();
 
         }
 
@@ -43,17 +45,32 @@ namespace CEMEX.Web.Controllers
         {
          
             ViewModelRolCrear model = new ViewModelRolCrear();
+
+            //Se consulta el catalogo de Jerarquias.
             model.Jerarquias = jerarquiaDatos.GetJerarquias(ref respuesta);
 
             if (!respuesta.ExisteError)
             {
+                //Consulta el catalogo de Modulos en la aplicación.
                 modulos = moduloDatos.GetModulos(ref respuesta);
                 if (!respuesta.ExisteError)
                 {
+                    //Obtiene los módulos para moviles.
                     model.ModulosMovil = modulos.Where(x => x.IdPlataforma == (int)ETypePlataforma.Movil).ToList();
+                    //Obtiene los módulos para Web.
                     model.ModulosWeb = modulos.Where(x => x.IdPlataforma == (int)ETypePlataforma.Web).ToList();
 
-                    return View(model);
+
+                    model.Permisos = permisoDatos.GetPermisos(ref respuesta);
+
+                    if (!respuesta.ExisteError)
+                    {
+                        return View(model);
+                    }
+                    else
+                    {
+                        return View();
+                    }                   
                 }
                 else
                 {
