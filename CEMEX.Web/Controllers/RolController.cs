@@ -3,6 +3,7 @@ using CEMEX.Entidades;
 using CEMEX.Web.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace CEMEX.Web.Controllers
@@ -43,45 +44,41 @@ namespace CEMEX.Web.Controllers
 
         public ActionResult Crear()
         {
-         
             ViewModelRolCrear model = new ViewModelRolCrear();
-
             //Se consulta el catalogo de Jerarquias.
             model.Jerarquias = jerarquiaDatos.GetJerarquias(ref respuesta);
 
             if (!respuesta.ExisteError)
             {
-                //Consulta el catalogo de Modulos en la aplicación.
+                //Se consultan los Modulos que se encuentren activos.
                 modulos = moduloDatos.GetModulos(ref respuesta);
                 if (!respuesta.ExisteError)
                 {
-                    //Obtiene los módulos para moviles.
+                    // Se asignan los Modulos que pertenezcan a moviles de la colección.
                     model.ModulosMovil = modulos.Where(x => x.IdPlataforma == (int)ETypePlataforma.Movil).ToList();
-                    //Obtiene los módulos para Web.
+                    // Se asignan los Modulos que pertenezcan a Web de la collección.
                     model.ModulosWeb = modulos.Where(x => x.IdPlataforma == (int)ETypePlataforma.Web).ToList();
 
-
+                    //Se consulta el catalogo de Permisos.
                     model.Permisos = permisoDatos.GetPermisos(ref respuesta);
 
                     if (!respuesta.ExisteError)
                     {
                         return View(model);
-                    }
-                    else
+                    }else
                     {
                         return View();
-                    }                   
+                    }
                 }
                 else
                 {
                     return View();
-                }                
-            }else
+                }
+            }
+            else
             {
                 return View();
-            }           
-        }
-
-        
+            }
+        }        
     }
 }

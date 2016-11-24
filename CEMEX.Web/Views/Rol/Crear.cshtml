@@ -119,42 +119,45 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        @for (int indexModuloWeb = 0; indexModuloWeb < Model.ModulosWeb.Count; indexModuloWeb++)
+                                                        @if (Model.ModulosWeb != null)
                                                         {
-                                                            if (Model.ModulosWeb[indexModuloWeb].Paginas.Count > 0)
+                                                            for (int indexModuloWeb = 0; indexModuloWeb < Model.ModulosWeb.Count; indexModuloWeb++)
                                                             {
-                                                                <div id="funcionalidadesWeb-panel-@indexModuloWeb" class="panel-group">
-                                                                    <div class="panel panel-default">
-                                                                        <div class="panel-heading">
-                                                                            <a href="#funcionalidadesWeb-box-@indexModuloWeb" data-parent="#funcionalidadesWeb-panel-@indexModuloWeb" data-toggle="collapse">
-                                                                                <h3 class="panel-title"> @Model.ModulosWeb[indexModuloWeb].Nombre <i class="fa fa-caret-down"></i></h3>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div id="funcionalidadesWeb-box-@indexModuloWeb" class="panel-collapse fade collapse">
-                                                                            <div class="panel-body">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-4">
-                                                                                        <div class="form-group">
-                                                                                            <div class="checkbox">
-                                                                                                <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        @for (int indexPagina = 0; indexPagina < Model.ModulosWeb[indexModuloWeb].Paginas.Count; indexPagina++)
-                                                                                        {
+                                                                if (Model.ModulosWeb[indexModuloWeb].Paginas.Count > 0)
+                                                                {
+                                                                    <div id="funcionalidadesWeb-panel-@indexModuloWeb" class="panel-group">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading">
+                                                                                <a href="#funcionalidadesWeb-box-@indexModuloWeb" data-parent="#funcionalidadesWeb-panel-@indexModuloWeb" data-toggle="collapse">
+                                                                                    <h3 class="panel-title"> @Model.ModulosWeb[indexModuloWeb].Nombre <i class="fa fa-caret-down"></i></h3>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div id="funcionalidadesWeb-box-@indexModuloWeb" class="panel-collapse fade collapse">
+                                                                                <div class="panel-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-4">
                                                                                             <div class="form-group">
                                                                                                 <div class="checkbox">
-                                                                                                    <label> <input type="checkbox" role="button"> <p> @Model.ModulosWeb[indexModuloWeb].Paginas[indexPagina].Nombre</p></label>
+                                                                                                    <label> <input type="checkbox" role="button"> <h3>Seleccionar todos</h3></label>
                                                                                                 </div>
                                                                                             </div>
-                                                                                        }
-                                                                                    </div>
-                                                                                    <div class="col-md-8">
-                                                                                        <div class="form-group">
-                                                                                            <div class="btn-select" data-toggle="buttons">
-                                                                                                @for (int indexPermiso = 0; indexPermiso < Model.Permisos.Count; indexPermiso++)
-                                                                                                {
-                                                                                                    <span><input type="checkbox" value=""><p> @Model.Permisos[indexPermiso].Nombre</p></span>
-                                                                                                }
+                                                                                            @for (int indexPagina = 0; indexPagina < Model.ModulosWeb[indexModuloWeb].Paginas.Count; indexPagina++)
+                                                                                            {
+                                                                                                <div class="form-group">
+                                                                                                    <div class="checkbox">
+                                                                                                        <label> <input type="checkbox" role="button"> <p> @Model.ModulosWeb[indexModuloWeb].Paginas[indexPagina].Nombre</p></label>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            }
+                                                                                        </div>
+                                                                                        <div class="col-md-8">
+                                                                                            <div class="form-group">
+                                                                                                <div class="btn-select" data-toggle="buttons">
+                                                                                                    @for (int indexPermiso = 0; indexPermiso < Model.Permisos.Count; indexPermiso++)
+                                                                                                    {
+                                                                                                        <span><input type="checkbox" value=""><p> @Model.Permisos[indexPermiso].Nombre</p></span>
+                                                                                                    }
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -162,9 +165,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                }
                                                             }
                                                         }
+
 
 
 
